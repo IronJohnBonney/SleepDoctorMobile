@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicBarVC" customModule="SleepDoctorMobile" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="Ymq-Qo-gdQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-fJ-h1m">
+                    <rect key="frame" x="82" y="40" width="211" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="211" id="fdD-4k-9a0"/>
+                        <constraint firstAttribute="height" constant="2" id="hWx-Nd-tOh"/>
+                    </constraints>
+                    <color key="progressTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwW-AN-FCJ">
+                    <rect key="frame" x="312" y="26" width="42" height="30"/>
+                    <state key="normal" title="pause">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedPlay:" destination="-1" eventType="touchUpInside" id="e9o-QH-zL8"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="^" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0k-E9-6Ur">
+                    <rect key="frame" x="25" y="30" width="12" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:23/13:42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKN-Yv-rl9">
+                    <rect key="frame" x="145" y="50" width="84" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztd-e7-pzx">
+                    <rect key="frame" x="141" y="11" width="92" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2W-25-dhA" customClass="UIControl">
+                    <rect key="frame" x="-24" y="11" width="343" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="tappedBar:" destination="-1" eventType="touchUpInside" id="esk-sT-yDK"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="f0k-E9-6Ur" secondAttribute="bottom" constant="20" id="1b5-nR-eHZ"/>
+                <constraint firstItem="zKN-Yv-rl9" firstAttribute="centerX" secondItem="Epu-fJ-h1m" secondAttribute="centerX" id="2rP-ZA-rFS"/>
+                <constraint firstItem="Epu-fJ-h1m" firstAttribute="top" secondItem="ztd-e7-pzx" secondAttribute="bottom" constant="8" id="3lc-0U-sdy"/>
+                <constraint firstItem="IwW-AN-FCJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="67G-CN-u9N"/>
+                <constraint firstItem="zKN-Yv-rl9" firstAttribute="top" secondItem="Epu-fJ-h1m" secondAttribute="bottom" constant="8" id="IrJ-qx-9KJ"/>
+                <constraint firstItem="Epu-fJ-h1m" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="NJn-AT-aX7"/>
+                <constraint firstItem="ztd-e7-pzx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OCP-DK-Oca"/>
+                <constraint firstItem="h2W-25-dhA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-32" id="RHe-Tg-sjt"/>
+                <constraint firstItem="f0k-E9-6Ur" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="ROK-ps-1uD"/>
+                <constraint firstItem="h2W-25-dhA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" constant="-22" id="Rrp-zL-j0q"/>
+                <constraint firstItem="h2W-25-dhA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YQc-1P-uBd"/>
+                <constraint firstItem="h2W-25-dhA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aM9-bg-bjN"/>
+                <constraint firstAttribute="trailing" secondItem="IwW-AN-FCJ" secondAttribute="trailing" constant="21" id="m19-Q6-eMQ"/>
+                <constraint firstItem="Epu-fJ-h1m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wSW-dN-vag"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="30.5" y="-250"/>
+        </view>
+    </objects>
+</document>

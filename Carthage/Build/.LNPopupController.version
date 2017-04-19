@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.2.1\nBuild version 8C1002",
+  "commitish" : "v2.2.1",
+  "iOS" : [
+    {
+      "hash" : "62cfdc098072754b95b4207f46c05d08b9a6ef346191f40a05c358c082287b8a",
+      "name" : "LNPopupController"
+    }
+  ]
+}

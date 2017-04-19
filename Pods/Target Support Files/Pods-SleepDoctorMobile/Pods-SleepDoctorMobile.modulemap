@@ -1,0 +1,6 @@
+framework module Pods_SleepDoctorMobile {
+  umbrella header "Pods-SleepDoctorMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}

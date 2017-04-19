@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19594CAABDE651F4D6490243 /* Pods_SleepDoctorMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897FDE9E51973DCF8FE06D2A /* Pods_SleepDoctorMobile.framework */; };
+		E2407AA91E79DB1A003087AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AA81E79DB1A003087AF /* AppDelegate.swift */; };
+		E2407AAE1E79DB1A003087AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2407AAC1E79DB1A003087AF /* Main.storyboard */; };
+		E2407AB11E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2407AAF1E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld */; };
+		E2407AB31E79DB1A003087AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2407AB21E79DB1A003087AF /* Assets.xcassets */; };
+		E2407AB61E79DB1A003087AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2407AB41E79DB1A003087AF /* LaunchScreen.storyboard */; };
+		E2407AC01E79FE72003087AF /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2407ABF1E79FE72003087AF /* CalendarViewController.m */; };
+		E2407AC21E82F739003087AF /* MeditateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AC11E82F739003087AF /* MeditateViewController.swift */; };
+		E2407AC51E831279003087AF /* MusicBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AC31E831277003087AF /* MusicBarVC.swift */; };
+		E2407AC61E83127B003087AF /* MusicBarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2407AC41E831279003087AF /* MusicBarVC.xib */; };
+		E2407AC91E832DCF003087AF /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AC71E832DCF003087AF /* MusicPlayerViewController.swift */; };
+		E2407ACA1E832DD0003087AF /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2407AC81E832DCF003087AF /* MusicPlayerViewController.xib */; };
+		E2407ACC1E83522A003087AF /* LNPopupController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2407ACB1E83522A003087AF /* LNPopupController.framework */; };
+		E25A64A21EA7EED300D856BC /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A64A01EA7EED300D856BC /* ResultsVC.swift */; };
+		E25A64A31EA7EED300D856BC /* ResultsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25A64A11EA7EED300D856BC /* ResultsVC.xib */; };
+		E25A64A51EA8005200D856BC /* ResultTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A64A41EA8005100D856BC /* ResultTVCell.swift */; };
+		E25A64A71EA80ADC00D856BC /* ResultTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25A64A61EA80ADC00D856BC /* ResultTVCell.xib */; };
+		E2794A851E846D4600CE481A /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A841E846D4600CE481A /* MusicPlayer.swift */; };
+		E2794A871E8C616A00CE481A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A861E8C616800CE481A /* AppConstants.swift */; };
+		E2794A891E8C62BD00CE481A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A881E8C62BD00CE481A /* HomeViewController.swift */; };
+		E2F074091EA6ABF2004ADE22 /* QuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */; };
+		E2F0740B1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */; };
+		E2F0740D1EA6D3D4004ADE22 /* QuestionnaireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		897FDE9E51973DCF8FE06D2A /* Pods_SleepDoctorMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepDoctorMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58A6D5A4A88089690AF4DC3 /* Pods-SleepDoctorMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepDoctorMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepDoctorMobile/Pods-SleepDoctorMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		E2407AA51E79DB1A003087AF /* SleepDoctorMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepDoctorMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2407AA81E79DB1A003087AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2407AAD1E79DB1A003087AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2407AB01E79DB1A003087AF /* SleepDoctorMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SleepDoctorMobile.xcdatamodel; sourceTree = "<group>"; };
+		E2407AB21E79DB1A003087AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2407AB51E79DB1A003087AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2407AB71E79DB1A003087AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2407ABD1E79FE71003087AF /* SleepDoctorMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SleepDoctorMobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2407ABE1E79FE72003087AF /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		E2407ABF1E79FE72003087AF /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		E2407AC11E82F739003087AF /* MeditateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditateViewController.swift; sourceTree = "<group>"; };
+		E2407AC31E831277003087AF /* MusicBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicBarVC.swift; sourceTree = "<group>"; };
+		E2407AC41E831279003087AF /* MusicBarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicBarVC.xib; sourceTree = "<group>"; };
+		E2407AC71E832DCF003087AF /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		E2407AC81E832DCF003087AF /* MusicPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerViewController.xib; sourceTree = "<group>"; };
+		E2407ACB1E83522A003087AF /* LNPopupController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LNPopupController.framework; path = Carthage/Build/iOS/LNPopupController.framework; sourceTree = "<group>"; };
+		E25A64A01EA7EED300D856BC /* ResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
+		E25A64A11EA7EED300D856BC /* ResultsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsVC.xib; sourceTree = "<group>"; };
+		E25A64A41EA8005100D856BC /* ResultTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTVCell.swift; sourceTree = "<group>"; };
+		E25A64A61EA80ADC00D856BC /* ResultTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTVCell.xib; sourceTree = "<group>"; };
+		E2794A841E846D4600CE481A /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		E2794A861E8C616800CE481A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E2794A881E8C62BD00CE481A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireVC.swift; sourceTree = "<group>"; };
+		E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireAnalyzer.swift; sourceTree = "<group>"; };
+		E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireModel.swift; sourceTree = "<group>"; };
+		E8830CA038927EFCDDEB062F /* Pods-SleepDoctorMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepDoctorMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepDoctorMobile/Pods-SleepDoctorMobile.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2407AA21E79DB1A003087AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19594CAABDE651F4D6490243 /* Pods_SleepDoctorMobile.framework in Frameworks */,
+				E2407ACC1E83522A003087AF /* LNPopupController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C7CB19B8B08F90FC2D4E48D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2407ACB1E83522A003087AF /* LNPopupController.framework */,
+				897FDE9E51973DCF8FE06D2A /* Pods_SleepDoctorMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD06CABF186FC04DD3A8E4E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B58A6D5A4A88089690AF4DC3 /* Pods-SleepDoctorMobile.debug.xcconfig */,
+				E8830CA038927EFCDDEB062F /* Pods-SleepDoctorMobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2407A9C1E79DB1A003087AF = {
+			isa = PBXGroup;
+			children = (
+				E2407AA71E79DB1A003087AF /* SleepDoctorMobile */,
+				E2407AA61E79DB1A003087AF /* Products */,
+				CD06CABF186FC04DD3A8E4E1 /* Pods */,
+				6C7CB19B8B08F90FC2D4E48D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2407AA61E79DB1A003087AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2407AA51E79DB1A003087AF /* SleepDoctorMobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2407AA71E79DB1A003087AF /* SleepDoctorMobile */ = {
+			isa = PBXGroup;
+			children = (
+				E2407AA81E79DB1A003087AF /* AppDelegate.swift */,
+				E2794A861E8C616800CE481A /* AppConstants.swift */,
+				E2794A881E8C62BD00CE481A /* HomeViewController.swift */,
+				E2794A841E846D4600CE481A /* MusicPlayer.swift */,
+				E2407AC71E832DCF003087AF /* MusicPlayerViewController.swift */,
+				E2407AC81E832DCF003087AF /* MusicPlayerViewController.xib */,
+				E2407AC31E831277003087AF /* MusicBarVC.swift */,
+				E2407AC41E831279003087AF /* MusicBarVC.xib */,
+				E2407ABE1E79FE72003087AF /* CalendarViewController.h */,
+				E2407ABF1E79FE72003087AF /* CalendarViewController.m */,
+				E2407AC11E82F739003087AF /* MeditateViewController.swift */,
+				E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */,
+				E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */,
+				E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */,
+				E25A64A01EA7EED300D856BC /* ResultsVC.swift */,
+				E25A64A11EA7EED300D856BC /* ResultsVC.xib */,
+				E25A64A41EA8005100D856BC /* ResultTVCell.swift */,
+				E25A64A61EA80ADC00D856BC /* ResultTVCell.xib */,
+				E2407AAC1E79DB1A003087AF /* Main.storyboard */,
+				E2407AB21E79DB1A003087AF /* Assets.xcassets */,
+				E2407AB41E79DB1A003087AF /* LaunchScreen.storyboard */,
+				E2407AB71E79DB1A003087AF /* Info.plist */,
+				E2407AAF1E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld */,
+				E2407ABD1E79FE71003087AF /* SleepDoctorMobile-Bridging-Header.h */,
+			);
+			path = SleepDoctorMobile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2407AA41E79DB1A003087AF /* SleepDoctorMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2407ABA1E79DB1A003087AF /* Build configuration list for PBXNativeTarget "SleepDoctorMobile" */;
+			buildPhases = (
+				64B6206BE5A44FCBB5D7A8AB /* 📦 Check Pods Manifest.lock */,
+				E2407AA11E79DB1A003087AF /* Sources */,
+				E2407AA21E79DB1A003087AF /* Frameworks */,
+				E2407AA31E79DB1A003087AF /* Resources */,
+				5B374C5F1008236B893570D9 /* 📦 Embed Pods Frameworks */,
+				F8DB42129880E571EF352624 /* 📦 Copy Pods Resources */,
+				E2407ACD1E83529B003087AF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SleepDoctorMobile;
+			productName = SleepDoctorMobile;
+			productReference = E2407AA51E79DB1A003087AF /* SleepDoctorMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2407A9D1E79DB1A003087AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Spaceboat Development LLC";
+				TargetAttributes = {
+					E2407AA41E79DB1A003087AF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2W3WS8TBTT;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E2407AA01E79DB1A003087AF /* Build configuration list for PBXProject "SleepDoctorMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2407A9C1E79DB1A003087AF;
+			productRefGroup = E2407AA61E79DB1A003087AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2407AA41E79DB1A003087AF /* SleepDoctorMobile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2407AA31E79DB1A003087AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2407ACA1E832DD0003087AF /* MusicPlayerViewController.xib in Resources */,
+				E2407AB61E79DB1A003087AF /* LaunchScreen.storyboard in Resources */,
+				E2407AB31E79DB1A003087AF /* Assets.xcassets in Resources */,
+				E25A64A71EA80ADC00D856BC /* ResultTVCell.xib in Resources */,
+				E25A64A31EA7EED300D856BC /* ResultsVC.xib in Resources */,
+				E2407AC61E83127B003087AF /* MusicBarVC.xib in Resources */,
+				E2407AAE1E79DB1A003087AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B374C5F1008236B893570D9 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepDoctorMobile/Pods-SleepDoctorMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64B6206BE5A44FCBB5D7A8AB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2407ACD1E83529B003087AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LNPopupController.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		F8DB42129880E571EF352624 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepDoctorMobile/Pods-SleepDoctorMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2407AA11E79DB1A003087AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F0740B1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift in Sources */,
+				E2407AC21E82F739003087AF /* MeditateViewController.swift in Sources */,
+				E2794A871E8C616A00CE481A /* AppConstants.swift in Sources */,
+				E2407AC01E79FE72003087AF /* CalendarViewController.m in Sources */,
+				E25A64A51EA8005200D856BC /* ResultTVCell.swift in Sources */,
+				E2794A851E846D4600CE481A /* MusicPlayer.swift in Sources */,
+				E2407AC51E831279003087AF /* MusicBarVC.swift in Sources */,
+				E2794A891E8C62BD00CE481A /* HomeViewController.swift in Sources */,
+				E25A64A21EA7EED300D856BC /* ResultsVC.swift in Sources */,
+				E2F0740D1EA6D3D4004ADE22 /* QuestionnaireModel.swift in Sources */,
+				E2F074091EA6ABF2004ADE22 /* QuestionnaireVC.swift in Sources */,
+				E2407AC91E832DCF003087AF /* MusicPlayerViewController.swift in Sources */,
+				E2407AB11E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld in Sources */,
+				E2407AA91E79DB1A003087AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E2407AAC1E79DB1A003087AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2407AAD1E79DB1A003087AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2407AB41E79DB1A003087AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2407AB51E79DB1A003087AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2407AB81E79DB1A003087AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2407AB91E79DB1A003087AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2407ABB1E79DB1A003087AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B58A6D5A4A88089690AF4DC3 /* Pods-SleepDoctorMobile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2W3WS8TBTT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SleepDoctorMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Spaceboat.SleepDoctorMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepDoctorMobile/SleepDoctorMobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E2407ABC1E79DB1A003087AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8830CA038927EFCDDEB062F /* Pods-SleepDoctorMobile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2W3WS8TBTT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SleepDoctorMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Spaceboat.SleepDoctorMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepDoctorMobile/SleepDoctorMobile-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2407AA01E79DB1A003087AF /* Build configuration list for PBXProject "SleepDoctorMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2407AB81E79DB1A003087AF /* Debug */,
+				E2407AB91E79DB1A003087AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2407ABA1E79DB1A003087AF /* Build configuration list for PBXNativeTarget "SleepDoctorMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2407ABB1E79DB1A003087AF /* Debug */,
+				E2407ABC1E79DB1A003087AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2407AAF1E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2407AB01E79DB1A003087AF /* SleepDoctorMobile.xcdatamodel */,
+			);
+			currentVersion = E2407AB01E79DB1A003087AF /* SleepDoctorMobile.xcdatamodel */;
+			path = SleepDoctorMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E2407A9D1E79DB1A003087AF /* Project object */;
+}
