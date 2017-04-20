@@ -13,6 +13,7 @@ class MeditateViewController: UIViewController, UITableViewDelegate, UITableView
 
     
     @IBOutlet weak var trackTableView: UITableView!
+
     
     let trackNames        = ["Yoga Nidra",
                              "Mindful Deep Breathing",
@@ -21,7 +22,7 @@ class MeditateViewController: UIViewController, UITableViewDelegate, UITableView
     
     let trackDescriptions = ["Guided Meditation for Relaxation before Sleep",
                              "A Deep Breathing Meditation Technique",
-                             "Traditional Indian Mantra Meditation",
+                             "Traditional Mantra Meditation",
                              "A Massage Muscle Relaxation Technique"]
     
     // The following stream strings will be passed to the music player to initialize the player with
@@ -151,7 +152,7 @@ class MeditateViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (self.view.frame.height - 100)/4
+        return 120//(self.view.frame.height - 150)/4
     }
     
     
@@ -165,11 +166,16 @@ class MeditateViewController: UIViewController, UITableViewDelegate, UITableView
         let descriptionLabel = cell.viewWithTag(2) as! UILabel
         descriptionLabel.text = trackDescriptions[indexPath.row]
         
-        let backgroundColor = UIColor.init(patternImage: trackImages[indexPath.row])
-        cell.backgroundColor = backgroundColor
-        
         let playButton = cell.viewWithTag(3) as! UIButton
         playButton.addTarget(self, action: #selector(MeditateViewController.playButtonTapped(_:)), for: .touchUpInside)
+        
+        let bgImageView = cell.viewWithTag(4) as! UIImageView
+        bgImageView.image = trackImages[indexPath.row]
+        
+        if (indexPath.row == 0) {
+            // This will make the moon image look better.
+            bgImageView.contentMode = .scaleAspectFill
+        }
 
         return cell
     }

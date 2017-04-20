@@ -25,13 +25,13 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var disorderArray = ["Sleep Apnea",
                          "Insomnia",
-                         "RLS",
-                         "Narcolepsy"]
+                         "Narcolepsy",
+                         "RLS"]
     
     var descriptionArray = ["A condition where breathing stops for periods of time during the night.",
                             "A condition where you have trouble falling asleep at night",
-                            "A condition where you have trouble stopping movement of your body at night.",
-                            "A condition where you suddenly fall asleep during waking hours."]
+                            "A condition where you suddenly fall asleep during waking hours.",
+                            "A condition where you have trouble stopping movement of your body at night."]
     
     init(results: [Bool]) {
         self.resultsArray = results
@@ -77,7 +77,7 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if (resultsArray?[indexPath.row] == true) {
             // High Risk
             cell.resultSymbol.text = "!"
-            cell.resultText.text   = "High Risk"
+            cell.resultText.text   = "At Risk"
             cell.resultBGView?.backgroundColor = UIColor.red
         } else {
             // Low Risk

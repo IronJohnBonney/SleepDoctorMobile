@@ -13,6 +13,8 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
 
     static let shared: MusicPlayerViewController = MusicPlayerViewController()
     
+    
+    
     @IBOutlet weak var trackProgressBar: UIProgressView!
     @IBOutlet weak var trackNameLabel: UILabel!
     @IBOutlet weak var trackDescriptionLabel: UILabel!
@@ -20,6 +22,7 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
     
     @IBOutlet weak var playButtonBorderView: UIView!
     @IBOutlet weak var trackImage: UIImageView!
+    @IBOutlet weak var imageTitleLabel: UILabel!
     
     
     
@@ -75,7 +78,10 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
         self.popupItem.title = withName
         self.popupItem.subtitle = description
         self.popupItem.progress = 0.34
-        self.popupItem.rightBarButtonItems = [UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.camera, target: MusicPlayer.shared, action: #selector(MusicPlayer.togglePlayOrPause))]
+        //self.popupItem.rightBarButtonItems = [UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.camera, target: MusicPlayer.shared, action: #selector(MusicPlayer.togglePlayOrPause))]
+        
+        
+        self.popupItem.rightBarButtonItems = [UIBarButtonItem.init(image: #imageLiteral(resourceName: "Pause-Button-White-BBI"), style: .plain, target: MusicPlayer.shared, action: #selector(MusicPlayer.togglePlayOrPause))]
         
         /*
         self.navigationController?.popupInteractionStyle = .drag
@@ -92,6 +98,9 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
         self.trackNameLabel.text = withName
         self.trackDescriptionLabel.text = description
         self.trackImage.image = image
+        self.trackImage.layer.cornerRadius = 12.0
+        self.trackImage.layer.masksToBounds = true
+        self.imageTitleLabel.text = withName
         
     }
     
@@ -102,13 +111,18 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
     func didPausePlayer(){
         // TODO: Set pause to play
         //self.playButton.setTitle("play", for: .normal)
-        self.playButton.setImage(UIImage.init(named: "Play-Button-White"), for: .normal)
+        self.playButton.setImage(#imageLiteral(resourceName: "Play-Button-White"), for: .normal)
+        
+        // Set the popupitem's right bbi to the correct play/pause image
+        self.popupItem.rightBarButtonItems = [UIBarButtonItem.init(image: #imageLiteral(resourceName: "Play-Button-White-BBI"), style: .plain, target: MusicPlayer.shared, action: #selector(MusicPlayer.togglePlayOrPause))]
     }
     
     func didPlayPlayer() {
         // TODO: Set play to pause
         //self.playButton.setTitle("pause", for: .normal)
-        self.playButton.setImage(UIImage.init(named: "Pause-Button-White"), for: .normal)
+        self.playButton.setImage(#imageLiteral(resourceName: "Pause-Button-White"), for: .normal)
+        // Set the popupitem's right bbi to the correct play/pause image
+        self.popupItem.rightBarButtonItems = [UIBarButtonItem.init(image: #imageLiteral(resourceName: "Pause-Button-White-BBI"), style: .plain, target: MusicPlayer.shared, action: #selector(MusicPlayer.togglePlayOrPause))]
     }
 
 }

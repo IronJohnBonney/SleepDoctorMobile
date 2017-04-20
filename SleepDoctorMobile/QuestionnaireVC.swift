@@ -29,11 +29,12 @@ class QuestionnaireVC: UIViewController {
     @IBOutlet weak var noButton: UIButton!
     
     // Group 3 - UI Elements for 1-5 Questions
+    @IBOutlet weak var epworthPrompt: UILabel!
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var twoButton: UIButton!
     @IBOutlet weak var threeButton: UIButton!
     @IBOutlet weak var fourButton: UIButton!
-    @IBOutlet weak var fiveButton: UIButton!
+    @IBOutlet weak var fiveButton: UIButton! // Removed, only need 1-4
     
     
     // Intro Value Trackers
@@ -86,10 +87,7 @@ class QuestionnaireVC: UIViewController {
             object?.layer.borderWidth = 2.0
             object?.layer.cornerRadius = 25.0
             object?.layer.masksToBounds = true
-            
         }
-        
-        
         
         
         questionIndex = UserDefaults.standard.integer(forKey: questionIndexKey)
@@ -105,11 +103,7 @@ class QuestionnaireVC: UIViewController {
             // No existing question index. Start from scratch.
             // Show correct UI Elements
             setupView(forIndex: 0)
-            
-            
         }
-        
-        
     }
     
     @IBAction func presentResults(_ sender: Any) {
@@ -162,20 +156,22 @@ class QuestionnaireVC: UIViewController {
     
     func hideGroupThree() {
         // Hide Group 3 UI Elements
-        oneButton.isHidden   = true
-        twoButton.isHidden   = true
-        threeButton.isHidden = true
-        fourButton.isHidden  = true
-        fiveButton.isHidden  = true
+        oneButton.isHidden     = true
+        twoButton.isHidden     = true
+        threeButton.isHidden   = true
+        fourButton.isHidden    = true
+        //fiveButton.isHidden    = true
+        epworthPrompt.isHidden = true
     }
     
     func showGroupThree() {
         // Show Group 3 UI Elements
-        oneButton.isHidden   = false
-        twoButton.isHidden   = false
-        threeButton.isHidden = false
-        fourButton.isHidden  = false
-        fiveButton.isHidden  = false
+        oneButton.isHidden     = false
+        twoButton.isHidden     = false
+        threeButton.isHidden   = false
+        fourButton.isHidden    = false
+        //fiveButton.isHidden    = false
+        epworthPrompt.isHidden = false
     }
     
     
@@ -184,7 +180,7 @@ class QuestionnaireVC: UIViewController {
      *****/
     
     func setupView(forIndex:Int) {
-        guard (forIndex <= 39) else {
+        guard (forIndex <= 41) else {
             print("End of the rope! Trigger End Sequence!")
             
             let a = UIAlertController.init(title: "Questionnaire Complete"  , message: "We've analyzed your responses and your results are ready. Tap \"View Results\" to see a summary.", preferredStyle: .alert)
@@ -223,10 +219,13 @@ class QuestionnaireVC: UIViewController {
             let questionTitle = "Question " + String(forIndex)
             titleLabel.text = questionTitle
         }
+      
         
         // Set the descriptions/prompts.
-        let descriptionEntry = QuestionnaireModel().promptArray[forIndex]
+        let descriptionEntry  = QuestionnaireModel().promptArray[forIndex]
         descriptionLabel.text = descriptionEntry
+        let epworthPromptText = QuestionnaireModel().epworthSleepPrompts[forIndex]
+        epworthPrompt.text    = epworthPromptText
         
         let questionType = whatTypeOfQuestion(forIndex: forIndex)
         
@@ -256,7 +255,7 @@ class QuestionnaireVC: UIViewController {
             hideGroupTwo()
             
             // De-Highlight all the numbers upon reset.
-            let numberButtonArray = [oneButton, twoButton, threeButton, fourButton, fiveButton]
+            let numberButtonArray = [oneButton, twoButton, threeButton, fourButton]//, fiveButton]
             
             for (index, object) in numberButtonArray.enumerated() {
                 
@@ -281,9 +280,9 @@ class QuestionnaireVC: UIViewController {
         switch forIndex {
         case 0:
             return QuestionType.other
-        case 1...30:
+        case 1...34:
             return QuestionType.yesNo
-        case 31...40:
+        case 35...42:
             return QuestionType.oneToFive
         default:
             return QuestionType.other
@@ -297,7 +296,7 @@ class QuestionnaireVC: UIViewController {
     
     @IBAction func tappedNext(_ sender: Any) {
         print("Tapped Next")
-        guard (questionIndex! <= 39) else {
+        guard (questionIndex! <= 41) else {
             print("Present the results view modally!!")
             
             let analyzer = QuestionnaireAnalyzer()
@@ -365,9 +364,6 @@ class QuestionnaireVC: UIViewController {
                 //TODO: Present Popup telling user to make sure all info is entered
             }
         }
-        
-        
-        
     }
     
     @IBAction func tappedPrevious(_ sender: Any) {
@@ -453,7 +449,7 @@ class QuestionnaireVC: UIViewController {
         oneButton.backgroundColor = themeColor
         
         // De-Highlight Other Buttons
-        let numberButtonArray = [twoButton, threeButton, fourButton, fiveButton]
+        let numberButtonArray = [twoButton, threeButton, fourButton]//, fiveButton]
         
         for (index, object) in numberButtonArray.enumerated() {
             object?.backgroundColor = UIColor.white
@@ -470,7 +466,7 @@ class QuestionnaireVC: UIViewController {
         twoButton.backgroundColor = themeColor
         
         // De-Highlight Other Buttons
-        let numberButtonArray = [oneButton, threeButton, fourButton, fiveButton]
+        let numberButtonArray = [oneButton, threeButton, fourButton]//, fiveButton]
         
         for (index, object) in numberButtonArray.enumerated() {
             
@@ -489,7 +485,7 @@ class QuestionnaireVC: UIViewController {
         threeButton.backgroundColor = themeColor
 
         // De-Highlight Other Buttons
-        let numberButtonArray = [oneButton, twoButton, fourButton, fiveButton]
+        let numberButtonArray = [oneButton, twoButton, fourButton]//, fiveButton]
         
         for (index, object) in numberButtonArray.enumerated() {
             
@@ -508,7 +504,7 @@ class QuestionnaireVC: UIViewController {
         fourButton.backgroundColor = themeColor
         
         // De-Highlight Other Buttons
-        let numberButtonArray = [oneButton, twoButton, threeButton, fiveButton]
+        let numberButtonArray = [oneButton, twoButton, threeButton]//, fiveButton]
         
         for (index, object) in numberButtonArray.enumerated() {
             
@@ -519,6 +515,7 @@ class QuestionnaireVC: UIViewController {
     }
     
     @IBAction func tappedFiveButton(_ sender: Any) {
+        // TODO: DEPRECATED - The 5 button was removed. After testing this will be OK to delete.
         
         numberResponseRecorded = 5
         

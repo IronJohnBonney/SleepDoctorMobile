@@ -6,12 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicPlayerViewController" customModule="SleepDoctorMobile" customModuleProvider="target">
             <connections>
+                <outlet property="imageTitleLabel" destination="yG1-BZ-jnd" id="13G-ct-8Dg"/>
                 <outlet property="playButton" destination="OMa-UY-r7X" id="IuV-NQ-6te"/>
                 <outlet property="playButtonBorderView" destination="CgR-af-lgP" id="H1e-Oo-TYk"/>
                 <outlet property="trackDescriptionLabel" destination="Ain-Sz-Bsf" id="ry5-2q-Kbg"/>
@@ -86,12 +86,19 @@
                         <constraint firstItem="OMa-UY-r7X" firstAttribute="centerX" secondItem="CgR-af-lgP" secondAttribute="centerX" id="xyj-27-xGT"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Vf-FX-GDx">
-                    <rect key="frame" x="16" y="90" width="343" height="250"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="8Vf-FX-GDx" secondAttribute="height" multiplier="343:250" id="wbM-5A-dgY"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Vf-FX-GDx">
+                    <rect key="frame" x="33" y="76" width="309" height="250"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guided Sleep Meditation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-BZ-jnd">
+                    <rect key="frame" x="58" y="162" width="258" height="79"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="79" id="3E2-aH-PL7"/>
+                        <constraint firstAttribute="width" constant="258" id="rl6-Sz-qgK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -101,19 +108,23 @@
                 <constraint firstItem="Ain-Sz-Bsf" firstAttribute="centerX" secondItem="q4r-4s-3qh" secondAttribute="centerX" id="GX8-Wd-exl"/>
                 <constraint firstItem="q4r-4s-3qh" firstAttribute="top" secondItem="Ain-Sz-Bsf" secondAttribute="bottom" constant="15" id="IA0-Lw-ZZM"/>
                 <constraint firstItem="61v-Qt-05H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JWi-Pv-cr1"/>
+                <constraint firstItem="8Vf-FX-GDx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="76" id="L9B-ao-6QH"/>
                 <constraint firstItem="8Vf-FX-GDx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LuS-sx-gr3"/>
                 <constraint firstAttribute="trailing" secondItem="61v-Qt-05H" secondAttribute="trailing" constant="16" id="M7k-nA-r1u"/>
-                <constraint firstItem="aDN-Lk-xNu" firstAttribute="top" secondItem="8Vf-FX-GDx" secondAttribute="bottom" constant="37" id="Tn6-ct-iqq"/>
+                <constraint firstItem="aDN-Lk-xNu" firstAttribute="top" secondItem="8Vf-FX-GDx" secondAttribute="bottom" constant="51" id="Tn6-ct-iqq"/>
+                <constraint firstItem="yG1-BZ-jnd" firstAttribute="leading" secondItem="8Vf-FX-GDx" secondAttribute="trailing" constant="-284" id="Wbe-Wu-uWa"/>
                 <constraint firstAttribute="trailing" secondItem="q4r-4s-3qh" secondAttribute="trailing" constant="16" id="X20-gB-F8r"/>
                 <constraint firstItem="61v-Qt-05H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Y96-z9-Rqh"/>
                 <constraint firstItem="CgR-af-lgP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YuU-aJ-0ge"/>
                 <constraint firstItem="aDN-Lk-xNu" firstAttribute="centerX" secondItem="Ain-Sz-Bsf" secondAttribute="centerX" id="boS-Zp-XtT"/>
                 <constraint firstItem="q4r-4s-3qh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="115.5" id="fwi-Da-kEb"/>
-                <constraint firstItem="8Vf-FX-GDx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="jbg-t1-ces"/>
+                <constraint firstItem="yG1-BZ-jnd" firstAttribute="centerX" secondItem="8Vf-FX-GDx" secondAttribute="centerX" id="gcA-ul-1hE"/>
+                <constraint firstItem="8Vf-FX-GDx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="jbg-t1-ces"/>
                 <constraint firstItem="Ain-Sz-Bsf" firstAttribute="top" secondItem="aDN-Lk-xNu" secondAttribute="bottom" constant="4" id="jiO-ZV-VIN"/>
                 <constraint firstAttribute="bottom" secondItem="61v-Qt-05H" secondAttribute="bottom" constant="20" id="mM8-n9-DK5"/>
+                <constraint firstItem="yG1-BZ-jnd" firstAttribute="centerY" secondItem="8Vf-FX-GDx" secondAttribute="centerY" id="r49-dM-fIl"/>
                 <constraint firstItem="aDN-Lk-xNu" firstAttribute="width" secondItem="Ain-Sz-Bsf" secondAttribute="width" constant="-34" id="vyp-gR-CYg"/>
-                <constraint firstAttribute="trailing" secondItem="8Vf-FX-GDx" secondAttribute="trailing" constant="16" id="wl0-ZD-r5j"/>
+                <constraint firstAttribute="trailing" secondItem="8Vf-FX-GDx" secondAttribute="trailing" constant="33" id="wl0-ZD-r5j"/>
                 <constraint firstItem="Ain-Sz-Bsf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="z45-Q8-E7n"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>

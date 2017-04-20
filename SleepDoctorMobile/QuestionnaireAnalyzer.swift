@@ -29,33 +29,95 @@ class QuestionnaireAnalyzer: NSObject {
     }
     
     fileprivate func analyzeSleepApneaQuestions() -> Bool {
+        // Insomnia Questions are 1-12
         // TODO: Pull all answers for insomnia questions, add up score
+        var yesCount = 0
         
-        //TODO: This needs to return true if they're at risk, false if not
-        return true
+        for i in 1...12 {
+            // Records a Bool response to User Defaults
+            let questionIndexKey = "question" + String(i) + "Response"
+            let questionResponse = UserDefaults.standard.bool(forKey: questionIndexKey)
+            
+            if (questionResponse == true) {
+                yesCount += 1
+            }
+        }
+        
+        if (yesCount >= 3) {
+            return true
+        } else {
+            return false
+        }
     }
     
     fileprivate func analyzeInsomniaQuestions() -> Bool {
+        // Insomnia Questions are 1-12
         // TODO: Pull all answers for insomnia questions, add up score
+        var yesCount = 0
         
-        //TODO: This needs to return true if they're at risk, false if not
-        return false
-    }
-    
-    fileprivate func analyzeRLSResponses() -> Bool {
-        // TODO: Pull all answers for RLS Questions, add up score, return true if they have it, else false
+        for i in 13...19 {
+            // Records a Bool response to User Defaults
+            let questionIndexKey = "question" + String(i) + "Response"
+            let questionResponse = UserDefaults.standard.bool(forKey: questionIndexKey)
+            
+            if (questionResponse == true) {
+                yesCount += 1
+            }
+        }
         
-        //TODO: This needs to return true if they're at risk, false if not
-        return true
+        if (yesCount >= 3) {
+            return true
+        } else {
+            return false
+        }
     }
     
     fileprivate func analyzeNarcolepsyResponses() -> Bool {
         
-        //TODO: This needs to return true if they're at risk, false if not
-        return true
+        var yesCount = 0
+        
+        for i in 20...27 {
+            // Records a Bool response to User Defaults
+            let questionIndexKey = "question" + String(i) + "Response"
+            let questionResponse = UserDefaults.standard.bool(forKey: questionIndexKey)
+            
+            if (questionResponse == true) {
+                yesCount += 1
+            }
+        }
+        
+        if (yesCount >= 3) {
+            return true
+        } else {
+            return false
+        }
+
+    }
+    
+    fileprivate func analyzeRLSResponses() -> Bool {
+        
+        var yesCount = 0
+        
+        for i in 28...34 {
+            // Records a Bool response to User Defaults
+            let questionIndexKey = "question" + String(i) + "Response"
+            let questionResponse = UserDefaults.standard.bool(forKey: questionIndexKey)
+            
+            if (questionResponse == true) {
+                yesCount += 1
+            }
+        }
+        
+        if (yesCount >= 3) {
+            return true
+        } else {
+            return false
+        }
     }
     
     fileprivate func analyzeNumberSurvey() {
         // TODO: Analyze the daytime sleepiness and return something
+        
+        print("Analyzing Epworth Sleepiness scale derpaderrrrp")
     }
 }

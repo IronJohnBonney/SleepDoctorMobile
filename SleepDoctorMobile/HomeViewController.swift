@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         for button in buttonArray {
             button?.layer.cornerRadius = 50.0
             button?.layer.borderColor = UIColor.white.cgColor
-            button?.layer.borderWidth = 4.0
+            button?.layer.borderWidth = 3.0
             button?.layer.masksToBounds = true
         }
     }
