@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		19594CAABDE651F4D6490243 /* Pods_SleepDoctorMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897FDE9E51973DCF8FE06D2A /* Pods_SleepDoctorMobile.framework */; };
+		E21A539D1EAA9CD400657823 /* SleepDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A539C1EAA9CD300657823 /* SleepDiaryVC.swift */; };
+		E21A539F1EAABCA400657823 /* SleepDiaryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A539E1EAABCA400657823 /* SleepDiaryRealm.swift */; };
 		E2407AA91E79DB1A003087AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AA81E79DB1A003087AF /* AppDelegate.swift */; };
 		E2407AAE1E79DB1A003087AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2407AAC1E79DB1A003087AF /* Main.storyboard */; };
 		E2407AB11E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2407AAF1E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld */; };
 		E2407AB31E79DB1A003087AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2407AB21E79DB1A003087AF /* Assets.xcassets */; };
 		E2407AB61E79DB1A003087AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2407AB41E79DB1A003087AF /* LaunchScreen.storyboard */; };
-		E2407AC01E79FE72003087AF /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2407ABF1E79FE72003087AF /* CalendarViewController.m */; };
 		E2407AC21E82F739003087AF /* MeditateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AC11E82F739003087AF /* MeditateViewController.swift */; };
 		E2407AC51E831279003087AF /* MusicBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AC31E831277003087AF /* MusicBarVC.swift */; };
 		E2407AC61E83127B003087AF /* MusicBarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2407AC41E831279003087AF /* MusicBarVC.xib */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		897FDE9E51973DCF8FE06D2A /* Pods_SleepDoctorMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepDoctorMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58A6D5A4A88089690AF4DC3 /* Pods-SleepDoctorMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepDoctorMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepDoctorMobile/Pods-SleepDoctorMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		E21A539C1EAA9CD300657823 /* SleepDiaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepDiaryVC.swift; sourceTree = "<group>"; };
+		E21A539E1EAABCA400657823 /* SleepDiaryRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepDiaryRealm.swift; sourceTree = "<group>"; };
 		E2407AA51E79DB1A003087AF /* SleepDoctorMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepDoctorMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2407AA81E79DB1A003087AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2407AAD1E79DB1A003087AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,8 +46,6 @@
 		E2407AB51E79DB1A003087AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2407AB71E79DB1A003087AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2407ABD1E79FE71003087AF /* SleepDoctorMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SleepDoctorMobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		E2407ABE1E79FE72003087AF /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		E2407ABF1E79FE72003087AF /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		E2407AC11E82F739003087AF /* MeditateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditateViewController.swift; sourceTree = "<group>"; };
 		E2407AC31E831277003087AF /* MusicBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicBarVC.swift; sourceTree = "<group>"; };
 		E2407AC41E831279003087AF /* MusicBarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicBarVC.xib; sourceTree = "<group>"; };
@@ -118,15 +119,15 @@
 			children = (
 				E2407AA81E79DB1A003087AF /* AppDelegate.swift */,
 				E2794A861E8C616800CE481A /* AppConstants.swift */,
+				E21A539E1EAABCA400657823 /* SleepDiaryRealm.swift */,
 				E2794A881E8C62BD00CE481A /* HomeViewController.swift */,
 				E2794A841E846D4600CE481A /* MusicPlayer.swift */,
 				E2407AC71E832DCF003087AF /* MusicPlayerViewController.swift */,
 				E2407AC81E832DCF003087AF /* MusicPlayerViewController.xib */,
 				E2407AC31E831277003087AF /* MusicBarVC.swift */,
 				E2407AC41E831279003087AF /* MusicBarVC.xib */,
-				E2407ABE1E79FE72003087AF /* CalendarViewController.h */,
-				E2407ABF1E79FE72003087AF /* CalendarViewController.m */,
 				E2407AC11E82F739003087AF /* MeditateViewController.swift */,
+				E21A539C1EAA9CD300657823 /* SleepDiaryVC.swift */,
 				E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */,
 				E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */,
 				E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */,
@@ -291,7 +292,7 @@
 				E2F0740B1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift in Sources */,
 				E2407AC21E82F739003087AF /* MeditateViewController.swift in Sources */,
 				E2794A871E8C616A00CE481A /* AppConstants.swift in Sources */,
-				E2407AC01E79FE72003087AF /* CalendarViewController.m in Sources */,
+				E21A539F1EAABCA400657823 /* SleepDiaryRealm.swift in Sources */,
 				E25A64A51EA8005200D856BC /* ResultTVCell.swift in Sources */,
 				E2794A851E846D4600CE481A /* MusicPlayer.swift in Sources */,
 				E2407AC51E831279003087AF /* MusicBarVC.swift in Sources */,
@@ -299,6 +300,7 @@
 				E25A64A21EA7EED300D856BC /* ResultsVC.swift in Sources */,
 				E2F0740D1EA6D3D4004ADE22 /* QuestionnaireModel.swift in Sources */,
 				E2F074091EA6ABF2004ADE22 /* QuestionnaireVC.swift in Sources */,
+				E21A539D1EAA9CD400657823 /* SleepDiaryVC.swift in Sources */,
 				E2407AC91E832DCF003087AF /* MusicPlayerViewController.swift in Sources */,
 				E2407AB11E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld in Sources */,
 				E2407AA91E79DB1A003087AF /* AppDelegate.swift in Sources */,
