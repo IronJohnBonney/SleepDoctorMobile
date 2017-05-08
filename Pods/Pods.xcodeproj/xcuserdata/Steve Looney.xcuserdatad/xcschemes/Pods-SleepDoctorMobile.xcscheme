@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6E83C20B8221E4862FB6C20CBD8C62F1'
+               BlueprintIdentifier = 'A35B54849ED0987854841D3EF8E87230'
                BlueprintName = 'Pods-SleepDoctorMobile'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-SleepDoctorMobile.framework'>

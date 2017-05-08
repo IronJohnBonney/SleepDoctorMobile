@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>JTCalendar.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,6 +37,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>39B5CF86C5D5526023BFA614CD6D37DC</key>
 		<dict>
 			<key>primary</key>
@@ -42,7 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7D7445E2111B13BBB78ED551ABF32DCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A35B54849ED0987854841D3EF8E87230</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BAC8764E766849602A384103BFE77154</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D83C1AA8F665A8240512F21114F8CEC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

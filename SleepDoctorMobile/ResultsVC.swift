@@ -110,8 +110,17 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print("Condition: \(disorderArray[indexPath.row])")
         print("Description: \(descriptionArray[indexPath.row])")
         
+        
         // TODO: Push the disorder detail view
         print("Will push a disorder detail view so that the user can learn more about the condition, such as symptoms, risk factors, and treatment")
+        
+        
+        let detailVC = DisorderDetailVC()
+        detailVC.titleString = disorderArray[indexPath.row]
+        detailVC.descriptionString = descriptionArray[indexPath.row]
+        
+        // Push the detail view
+        self.navigationController?.pushViewController(detailVC, animated: true)
         
     }
     

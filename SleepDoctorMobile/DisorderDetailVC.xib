@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DisorderDetailVC" customModule="SleepDoctorMobile" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTextView" destination="fRV-9H-yXu" id="gwI-jS-0l5"/>
+                <outlet property="diagnosisTextView" destination="dUk-qc-048" id="NAp-u5-c3B"/>
+                <outlet property="symptomsTextView" destination="8Wf-Ce-669" id="aCI-IG-Erx"/>
+                <outlet property="titleLabel" destination="7uc-gf-Tn6" id="hBS-Zo-RU2"/>
+                <outlet property="treatmentTextView" destination="gcG-dj-VtX" id="wGT-y1-0pB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disorder Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uc-gf-Tn6">
+                    <rect key="frame" x="26" y="26" width="323" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="del-fF-E6X"/>
+                        <constraint firstAttribute="width" constant="323" id="rdS-S1-xfa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Descripion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2G-UP-MWJ">
+                    <rect key="frame" x="16" y="71" width="148" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="9Fc-lJ-Wdj"/>
+                        <constraint firstAttribute="width" constant="148" id="BuD-MO-szD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyQ-JJ-ReI">
+                    <rect key="frame" x="16" y="169" width="148" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Ny2-LE-fcb"/>
+                        <constraint firstAttribute="width" constant="148" id="vqW-tH-35f"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnosis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQw-P7-6mP">
+                    <rect key="frame" x="16" y="282" width="148" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Ix8-ar-a86"/>
+                        <constraint firstAttribute="width" constant="148" id="TWa-gd-Ze1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treatment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnP-ie-Ohm">
+                    <rect key="frame" x="16" y="401" width="148" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="148" id="Akj-TK-nq0"/>
+                        <constraint firstAttribute="height" constant="32" id="hrt-0z-B3c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fRV-9H-yXu">
+                    <rect key="frame" x="16" y="97" width="343" height="75"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="oB1-Lr-siG"/>
+                    </constraints>
+                    <string key="text">This is a descriptions of the sleep disorder. It tells about what the disorder is and who it typically occurs with, i.e. who is at risk.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wf-Ce-669">
+                    <rect key="frame" x="16" y="196" width="343" height="75"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="wrv-B3-1Ku"/>
+                    </constraints>
+                    <string key="text">This text view describes the symptoms of the disorder. This will help a user know how to recognize if they may be affeted by this particular sleep disorder.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dUk-qc-048">
+                    <rect key="frame" x="16" y="310" width="343" height="75"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="KLG-2k-Xyr"/>
+                    </constraints>
+                    <string key="text">This sections describes how the disorder is medically diagnosed. This will inform the user how they can confirm whether or not they have the sleep disorder.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gcG-dj-VtX">
+                    <rect key="frame" x="16" y="429" width="343" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="fmN-P7-MiO"/>
+                    </constraints>
+                    <string key="text">This section describes how to treat a particular sleep disorder if one is affected by it. For example, with insomnia, a user could be referred to the meditation recordings in the app's 'meditate' section.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Q6-dza">
+                    <rect key="frame" x="15" y="28" width="30" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="H65-jo-maa"/>
+                        <constraint firstAttribute="height" constant="29" id="fAJ-b9-MPp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="&lt;">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedBack:" destination="-1" eventType="touchUpInside" id="LF7-uB-Tg8"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMO-zf-gUe">
+                    <rect key="frame" x="26" y="585" width="323" height="62"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="HLz-TH-vSK"/>
+                        <constraint firstAttribute="width" constant="323" id="LVB-ry-Vw0"/>
+                    </constraints>
+                    <string key="text">You should always consult your physician to determine the correct action to take. The information provided is purely for educational purposes.</string>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fRV-9H-yXu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="1Fw-EO-6Tm"/>
+                <constraint firstItem="7uc-gf-Tn6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="3Ji-Hx-oJ1"/>
+                <constraint firstItem="lQw-P7-6mP" firstAttribute="top" secondItem="8Wf-Ce-669" secondAttribute="bottom" constant="11" id="3mM-tH-KOT"/>
+                <constraint firstItem="fRV-9H-yXu" firstAttribute="top" secondItem="r2G-UP-MWJ" secondAttribute="bottom" constant="-6" id="5ov-N9-E4H"/>
+                <constraint firstAttribute="trailing" secondItem="8Wf-Ce-669" secondAttribute="trailing" constant="16" id="7Ue-47-XID"/>
+                <constraint firstItem="hyQ-JJ-ReI" firstAttribute="top" secondItem="fRV-9H-yXu" secondAttribute="bottom" constant="-3" id="8h6-Bb-Qd1"/>
+                <constraint firstItem="QnP-ie-Ohm" firstAttribute="top" secondItem="dUk-qc-048" secondAttribute="bottom" constant="16" id="AKf-fs-1r6"/>
+                <constraint firstItem="r2G-UP-MWJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="E9v-at-qfd"/>
+                <constraint firstAttribute="bottom" secondItem="DMO-zf-gUe" secondAttribute="bottom" constant="20" id="HGp-1m-bmF"/>
+                <constraint firstItem="hyQ-JJ-ReI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="HKt-nE-BOB"/>
+                <constraint firstItem="QnP-ie-Ohm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Irs-oH-7Qd"/>
+                <constraint firstItem="DMO-zf-gUe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jjs-8d-jRn"/>
+                <constraint firstAttribute="trailing" secondItem="gcG-dj-VtX" secondAttribute="trailing" constant="16" id="KfB-wn-qns"/>
+                <constraint firstItem="r2G-UP-MWJ" firstAttribute="top" secondItem="7uc-gf-Tn6" secondAttribute="bottom" constant="13" id="MlV-PY-yei"/>
+                <constraint firstItem="lQw-P7-6mP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="VIx-hY-URB"/>
+                <constraint firstItem="wEy-Q6-dza" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Wvd-vW-MYG"/>
+                <constraint firstAttribute="trailing" secondItem="dUk-qc-048" secondAttribute="trailing" constant="16" id="bdV-Sw-gbx"/>
+                <constraint firstItem="7uc-gf-Tn6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d84-vn-8C0"/>
+                <constraint firstItem="8Wf-Ce-669" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="mVy-zz-GDq"/>
+                <constraint firstItem="dUk-qc-048" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="mwN-Vp-oSj"/>
+                <constraint firstAttribute="trailing" secondItem="fRV-9H-yXu" secondAttribute="trailing" constant="16" id="nJe-cp-XUt"/>
+                <constraint firstItem="dUk-qc-048" firstAttribute="top" secondItem="lQw-P7-6mP" secondAttribute="bottom" constant="-4" id="tJk-iW-nPO"/>
+                <constraint firstItem="gcG-dj-VtX" firstAttribute="top" secondItem="QnP-ie-Ohm" secondAttribute="bottom" constant="-4" id="wxc-uJ-Bge"/>
+                <constraint firstItem="8Wf-Ce-669" firstAttribute="top" secondItem="hyQ-JJ-ReI" secondAttribute="bottom" constant="-5" id="xNX-qW-1I3"/>
+                <constraint firstItem="gcG-dj-VtX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="xrz-ZY-IRV"/>
+                <constraint firstItem="wEy-Q6-dza" firstAttribute="centerY" secondItem="7uc-gf-Tn6" secondAttribute="centerY" constant="0.5" id="zdJ-sV-vI6"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

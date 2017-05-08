@@ -10,6 +10,9 @@
 		19594CAABDE651F4D6490243 /* Pods_SleepDoctorMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897FDE9E51973DCF8FE06D2A /* Pods_SleepDoctorMobile.framework */; };
 		E21A539D1EAA9CD400657823 /* SleepDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A539C1EAA9CD300657823 /* SleepDiaryVC.swift */; };
 		E21A539F1EAABCA400657823 /* SleepDiaryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A539E1EAABCA400657823 /* SleepDiaryRealm.swift */; };
+		E21A64111EAEE2D300E99617 /* DisorderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A640F1EAEE2D300E99617 /* DisorderDetailVC.swift */; };
+		E21A64121EAEE2D300E99617 /* DisorderDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21A64101EAEE2D300E99617 /* DisorderDetailVC.xib */; };
+		E21A64141EAEEA7500E99617 /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A64131EAEEA7500E99617 /* InformationVC.swift */; };
 		E2407AA91E79DB1A003087AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AA81E79DB1A003087AF /* AppDelegate.swift */; };
 		E2407AAE1E79DB1A003087AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2407AAC1E79DB1A003087AF /* Main.storyboard */; };
 		E2407AB11E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2407AAF1E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld */; };
@@ -38,6 +41,9 @@
 		B58A6D5A4A88089690AF4DC3 /* Pods-SleepDoctorMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepDoctorMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepDoctorMobile/Pods-SleepDoctorMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		E21A539C1EAA9CD300657823 /* SleepDiaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepDiaryVC.swift; sourceTree = "<group>"; };
 		E21A539E1EAABCA400657823 /* SleepDiaryRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepDiaryRealm.swift; sourceTree = "<group>"; };
+		E21A640F1EAEE2D300E99617 /* DisorderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisorderDetailVC.swift; sourceTree = "<group>"; };
+		E21A64101EAEE2D300E99617 /* DisorderDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisorderDetailVC.xib; sourceTree = "<group>"; };
+		E21A64131EAEEA7500E99617 /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
 		E2407AA51E79DB1A003087AF /* SleepDoctorMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepDoctorMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2407AA81E79DB1A003087AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2407AAD1E79DB1A003087AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,12 +127,15 @@
 				E2794A861E8C616800CE481A /* AppConstants.swift */,
 				E21A539E1EAABCA400657823 /* SleepDiaryRealm.swift */,
 				E2794A881E8C62BD00CE481A /* HomeViewController.swift */,
+				E21A640F1EAEE2D300E99617 /* DisorderDetailVC.swift */,
+				E21A64101EAEE2D300E99617 /* DisorderDetailVC.xib */,
 				E2794A841E846D4600CE481A /* MusicPlayer.swift */,
 				E2407AC71E832DCF003087AF /* MusicPlayerViewController.swift */,
 				E2407AC81E832DCF003087AF /* MusicPlayerViewController.xib */,
 				E2407AC31E831277003087AF /* MusicBarVC.swift */,
 				E2407AC41E831279003087AF /* MusicBarVC.xib */,
 				E2407AC11E82F739003087AF /* MeditateViewController.swift */,
+				E21A64131EAEEA7500E99617 /* InformationVC.swift */,
 				E21A539C1EAA9CD300657823 /* SleepDiaryVC.swift */,
 				E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */,
 				E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */,
@@ -215,6 +224,7 @@
 				E2407AB31E79DB1A003087AF /* Assets.xcassets in Resources */,
 				E25A64A71EA80ADC00D856BC /* ResultTVCell.xib in Resources */,
 				E25A64A31EA7EED300D856BC /* ResultsVC.xib in Resources */,
+				E21A64121EAEE2D300E99617 /* DisorderDetailVC.xib in Resources */,
 				E2407AC61E83127B003087AF /* MusicBarVC.xib in Resources */,
 				E2407AAE1E79DB1A003087AF /* Main.storyboard in Resources */,
 			);
@@ -298,7 +308,9 @@
 				E2407AC51E831279003087AF /* MusicBarVC.swift in Sources */,
 				E2794A891E8C62BD00CE481A /* HomeViewController.swift in Sources */,
 				E25A64A21EA7EED300D856BC /* ResultsVC.swift in Sources */,
+				E21A64111EAEE2D300E99617 /* DisorderDetailVC.swift in Sources */,
 				E2F0740D1EA6D3D4004ADE22 /* QuestionnaireModel.swift in Sources */,
+				E21A64141EAEEA7500E99617 /* InformationVC.swift in Sources */,
 				E2F074091EA6ABF2004ADE22 /* QuestionnaireVC.swift in Sources */,
 				E21A539D1EAA9CD400657823 /* SleepDiaryVC.swift in Sources */,
 				E2407AC91E832DCF003087AF /* MusicPlayerViewController.swift in Sources */,

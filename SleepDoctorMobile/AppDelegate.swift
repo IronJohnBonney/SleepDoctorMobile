@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import LNPopupController
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         musicPlayer.delegate = musicPlayerView
         
+        
+        // Config IQKeyboard Handler
+        IQKeyboardManager.sharedManager().enable = true
         
         
         return true

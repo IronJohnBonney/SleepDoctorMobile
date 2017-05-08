@@ -15,13 +15,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var jetlagButton: UIButton!
     @IBOutlet weak var informationButton: UIButton!    
+    @IBOutlet weak var aboutButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        let buttonArray = [surveyButton, meditateButton, calendarButton, jetlagButton, informationButton]
+        let buttonArray = [surveyButton, meditateButton, calendarButton, jetlagButton, informationButton, aboutButton]
         
         for button in buttonArray {
             button?.layer.cornerRadius = 50.0
@@ -29,6 +30,10 @@ class HomeViewController: UIViewController {
             button?.layer.borderWidth = 3.0
             button?.layer.masksToBounds = true
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {

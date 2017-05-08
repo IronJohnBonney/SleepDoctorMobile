@@ -8,6 +8,7 @@ target 'SleepDoctorMobile' do
   # Pods for SleepDoctorMobile
   pod 'JTCalendar', '~> 2.0'
   pod 'RealmSwift'
+  pod 'IQKeyboardManagerSwift'
 end
 
 post_install do |installer|
