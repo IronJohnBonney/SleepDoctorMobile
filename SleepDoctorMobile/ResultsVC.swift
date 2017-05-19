@@ -19,7 +19,10 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     */
     
     @IBOutlet weak var resultsTableView: UITableView!
+    @IBOutlet weak var sleepHygieneButton: UIButton!
     
+    // Used to pass to the results VC
+    var disorderCards = FlashCardModel().allCards()
     
     var resultsArray:[Bool]?
     
@@ -36,8 +39,6 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     init(results: [Bool]) {
         self.resultsArray = results
         super.init(nibName: nil, bundle: nil)
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,8 +51,17 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Register the identifier with the cell.
         //self.resultsTableView.register(ResultTVCell.self, forCellReuseIdentifier: "QResultCell")
         self.resultsTableView.register(UINib(nibName: "ResultTVCell", bundle: Bundle.main), forCellReuseIdentifier: "ResultCell")
-        // Do any additional setup after loading the view.
         
+        // Format tableView
+        resultsTableView.layer.cornerRadius = 12.0
+        
+        //
+        resultsTableView.contentInset = UIEdgeInsetsMake(-20.0, 0.0, 0.0, 0.0)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func dismissView(_ sender: Any) {
@@ -61,6 +71,11 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func tappedSleepHygieneButton(_ sender: Any) {
+        print("Push the sleep hygiene flash Card View")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,6 +119,10 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 80.0
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.0
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Tapped row \(indexPath.row)")
         
@@ -115,13 +134,16 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print("Will push a disorder detail view so that the user can learn more about the condition, such as symptoms, risk factors, and treatment")
         
         
-        let detailVC = DisorderDetailVC()
-        detailVC.titleString = disorderArray[indexPath.row]
-        detailVC.descriptionString = descriptionArray[indexPath.row]
+        // Pass the detailVC the flash cards to display
+        //let detailVC = DisorderDetailVC.init(withCards: disorderCards[indexPath.row])
+        let detailVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailVC") as! DisorderDetailVC
+        detailVC.disorderCards = disorderCards[indexPath.row]
+        
+        print("Here's the detail VC: ", detailVC)
+        print("And the nav controller: ", self.navigationController)
         
         // Push the detail view
-        self.navigationController?.pushViewController(detailVC, animated: true)
-        
+        self.navigationController?.pushViewController(detailVC, animated: true)        
     }
     
     /*

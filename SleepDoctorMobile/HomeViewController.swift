@@ -20,7 +20,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         let buttonArray = [surveyButton, meditateButton, calendarButton, jetlagButton, informationButton, aboutButton]
         
@@ -51,5 +50,59 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+class JetlagCalculatorVC: UIViewController {
+    
+    @IBOutlet weak var jetlagRoosterButton: UIButton!
+    @IBOutlet weak var baCalculatorButton: UIButton!
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Format the buttons
+        jetlagRoosterButton.layer.cornerRadius = 60.0
+        baCalculatorButton.layer.cornerRadius = 60.0
+    }
+}
+
+class JetlagWebView: UIViewController {
+    
+    @IBOutlet weak var webView: UIWebView!
+    
+    override func viewDidLoad() {
+        print("jetlag webview did load")
+        super.viewDidLoad()
+        let url = URL(string: "http://jetlagrooster.com")
+        let request = URLRequest(url: url!)
+        webView.loadRequest(request)
+    }
+}
+
+class BritishAirwaysWebView: UIViewController {
+    
+    @IBOutlet weak var webView: UIWebView!
+    
+    override func viewDidLoad() {
+        print("BA webview did load")
+        super.viewDidLoad()
+        let url = URL(string: "https://www.britishairways.com/travel/drsleep/public/en_au")
+        let request = URLRequest(url: url!)
+        webView.loadRequest(request)
+    }
+    
+}
+
+class AboutUsWebview: UIViewController {
+    
+    @IBOutlet weak var webView: UIWebView!
+    
+    override func viewDidLoad() {
+        print("jetlag webview did load")
+        super.viewDidLoad()
+        let url = URL(string: "http://ansaustin.com")
+        let request = URLRequest(url: url!)
+        webView.loadRequest(request)
+    }
+    
 }

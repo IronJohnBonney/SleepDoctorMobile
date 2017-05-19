@@ -132,17 +132,11 @@
                         <action selector="tappedBack:" destination="-1" eventType="touchUpInside" id="LF7-uB-Tg8"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMO-zf-gUe">
-                    <rect key="frame" x="26" y="585" width="323" height="62"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="62" id="HLz-TH-vSK"/>
-                        <constraint firstAttribute="width" constant="323" id="LVB-ry-Vw0"/>
-                    </constraints>
-                    <string key="text">You should always consult your physician to determine the correct action to take. The information provided is purely for educational purposes.</string>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Dm-G4-mdw">
+                    <rect key="frame" x="16" y="528" width="140" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -154,10 +148,8 @@
                 <constraint firstItem="hyQ-JJ-ReI" firstAttribute="top" secondItem="fRV-9H-yXu" secondAttribute="bottom" constant="-3" id="8h6-Bb-Qd1"/>
                 <constraint firstItem="QnP-ie-Ohm" firstAttribute="top" secondItem="dUk-qc-048" secondAttribute="bottom" constant="16" id="AKf-fs-1r6"/>
                 <constraint firstItem="r2G-UP-MWJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="E9v-at-qfd"/>
-                <constraint firstAttribute="bottom" secondItem="DMO-zf-gUe" secondAttribute="bottom" constant="20" id="HGp-1m-bmF"/>
                 <constraint firstItem="hyQ-JJ-ReI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="HKt-nE-BOB"/>
                 <constraint firstItem="QnP-ie-Ohm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Irs-oH-7Qd"/>
-                <constraint firstItem="DMO-zf-gUe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jjs-8d-jRn"/>
                 <constraint firstAttribute="trailing" secondItem="gcG-dj-VtX" secondAttribute="trailing" constant="16" id="KfB-wn-qns"/>
                 <constraint firstItem="r2G-UP-MWJ" firstAttribute="top" secondItem="7uc-gf-Tn6" secondAttribute="bottom" constant="13" id="MlV-PY-yei"/>
                 <constraint firstItem="lQw-P7-6mP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="VIx-hY-URB"/>

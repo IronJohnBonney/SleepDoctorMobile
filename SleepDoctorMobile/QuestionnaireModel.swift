@@ -8,6 +8,64 @@
 
 import UIKit
 
+struct FlashCard {
+    let title:String
+    let description:String
+}
+
+class FlashCardModel {
+    
+    // The disorder array below is for building the list of disorder buttons that can be tapped to see the flash cards.
+    let disorders = ["Sleep Apnea",
+                     "Insomnia",
+                     "Narcolepsy",
+                     "Restless Leg Syndrome"]
+    
+    
+    // The variables below set all of the flashcard text (front and back) for each of the sleep disorder detail views. For each disorder there are 4 cards.
+    let sleepApneaCards = [FlashCard.init(title: "What is Sleep Apnea?",
+                                          description: "Sleep Apnea is a condition where you stop breating for periods of time at night"),
+                           FlashCard.init(title: "Treatment",
+                                          description: "This is how you treat sleep apnea"),
+                           FlashCard.init(title: "Risk Factors",
+                                          description:"These are the factors that mean you may be at high risk of having sleep apnea"),
+                           FlashCard.init(title: "Symptoms",
+                                          description: "You may have a dry mouth at night, you may stop breathing at night, and you may saw logs.")]
+    
+    let insomniaCards   = [FlashCard.init(title: "What is Insomnia?",
+                                          description: "Insomnia is a condition where you can't fall asleep at night."),
+                           FlashCard.init(title: "Treatment",
+                                          description: "This is how you treat insomnia"),
+                           FlashCard.init(title: "Risk Factors",
+                                          description:"These are the factors that mean you may be at high risk of having insomnia"),
+                           FlashCard.init(title: "Symptoms",
+                                          description: "Trouble falling asleep at night, daytime sleepiness.")]
+    
+    let narcolepsyCards = [FlashCard.init(title: "What is Narcolepsy?",
+                                          description: "Narcolepsy is a condition where you fall asleep uncontrollably during waking hours."),
+                           FlashCard.init(title: "Treatment",
+                                          description: "This is how you treat narcolepsy"),
+                           FlashCard.init(title: "Risk Factors",
+                                          description:"These are the factors that mean you may be at high risk of having narcolepsy"),
+                           FlashCard.init(title: "Symptoms",
+                                          description: "You may experience sudden fits of sleep, your muscles may go limp at times throughout the day.")]
+    
+    let rlsCards        = [FlashCard.init(title: "What is RLS?",
+                                          description: "Restless Leg syndrome is a condition where you kick you can't stop moving your legs throughout the night."),
+                           FlashCard.init(title: "Treatment",
+                                          description: "This is how you treat RLS"),
+                           FlashCard.init(title: "Risk Factors",
+                                          description:"These are the factors that mean you may be at high risk of having RLS"),
+                           FlashCard.init(title: "Symptoms",
+                                          description: "You may experience an aching, crawling sensation in your legs as you fall asleep at night, an an inability to stop moving your legs.")]
+    
+    func allCards() -> [[FlashCard]] {
+        let allCards = [sleepApneaCards, insomniaCards, narcolepsyCards, rlsCards]
+        return allCards
+    }
+    
+}
+
 class QuestionnaireModel: NSObject {
     
     let promptArray:[String] = ["We'll start by collecting some basic information on you and your sleep patterns.",
@@ -49,7 +107,23 @@ class QuestionnaireModel: NSObject {
                    "Do you experience leg pain and cramps at night?",
                    "Can you sometimes not keep your legs still at night? Do you have to move them to feel comfortable?",
                    "Even though you slept during the night, do you feel sleepy during the day?",
-                   // Epworth Daytime Sleepiness Scale              35-42
+                   // Parasomnia Questions                          35-38
+                   "Do you act out your dreams while asleep?",
+                   "Do you have frequent nightmares?",
+                   "Do you talk in your sleep?",
+                   "Have you sleep walked as an adult?",
+                   // Sleep Hygiene Questions                       39-48
+                   "Do you have pets in the bedroom?",
+                   "Do you watch TV prior to sleeping?",
+                   "Do you read in bed?",
+                   "Do you drink alcohol prior to bedtime?",
+                   "Do you smoke prior to bedtime or if you wake up during the night?",
+                   "Do you eat a snack at bedtime?",
+                   "Do you eat if you wake up during the night?",
+                   "Do you sleep at anytime, without a fixed schedule?",
+                   "Do you wake up at anytime, without a fixed schedule?",
+                   "Do you take daytime naps?",
+                   // Epworth Daytime Sleepiness Scale              49-56
                    "How likely are you to fall asleep in the following situations, in contrast to feeling just tired? Using the following scale, select button 1-4 to indicate the most appropriate number for each situation.",
                    "How likely are you to fall asleep in the following situations, in contrast to feeling just tired? Using the following scale, select button 1-4 to indicate the most appropriate number for each situation.",
                    "How likely are you to fall asleep in the following situations, in contrast to feeling just tired? Using the following scale, select button 1-4 to indicate the most appropriate number for each situation.",
@@ -94,6 +168,20 @@ class QuestionnaireModel: NSObject {
                                "",
                                "",
                                "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
+                               "",
                                "Sitting and reading",
                                "Watching TV",
                                "Sitting, inactive in a public place (such as a theater or meeting",
@@ -102,5 +190,5 @@ class QuestionnaireModel: NSObject {
                                "Sitting and talking with someone",
                                "Sititng quietly after a lunch without alcohol",
                                "In a car, while stopped for a few minutes in traffic"]
-
 }
+

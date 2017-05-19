@@ -24,6 +24,7 @@
 		E2407AC91E832DCF003087AF /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2407AC71E832DCF003087AF /* MusicPlayerViewController.swift */; };
 		E2407ACA1E832DD0003087AF /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2407AC81E832DCF003087AF /* MusicPlayerViewController.xib */; };
 		E2407ACC1E83522A003087AF /* LNPopupController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2407ACB1E83522A003087AF /* LNPopupController.framework */; };
+		E24778AB1EC3AC0F00B67FE4 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24778AA1EC3AC0F00B67FE4 /* KDCircularProgress.swift */; };
 		E25A64A21EA7EED300D856BC /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A64A01EA7EED300D856BC /* ResultsVC.swift */; };
 		E25A64A31EA7EED300D856BC /* ResultsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25A64A11EA7EED300D856BC /* ResultsVC.xib */; };
 		E25A64A51EA8005200D856BC /* ResultTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A64A41EA8005100D856BC /* ResultTVCell.swift */; };
@@ -31,6 +32,7 @@
 		E2794A851E846D4600CE481A /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A841E846D4600CE481A /* MusicPlayer.swift */; };
 		E2794A871E8C616A00CE481A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A861E8C616800CE481A /* AppConstants.swift */; };
 		E2794A891E8C62BD00CE481A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A881E8C62BD00CE481A /* HomeViewController.swift */; };
+		E2BF35191ECB8AD700A5A3DF /* FlashCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BF35181ECB8AD700A5A3DF /* FlashCardVC.swift */; };
 		E2F074091EA6ABF2004ADE22 /* QuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */; };
 		E2F0740B1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */; };
 		E2F0740D1EA6D3D4004ADE22 /* QuestionnaireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */; };
@@ -58,6 +60,7 @@
 		E2407AC71E832DCF003087AF /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		E2407AC81E832DCF003087AF /* MusicPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerViewController.xib; sourceTree = "<group>"; };
 		E2407ACB1E83522A003087AF /* LNPopupController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LNPopupController.framework; path = Carthage/Build/iOS/LNPopupController.framework; sourceTree = "<group>"; };
+		E24778AA1EC3AC0F00B67FE4 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		E25A64A01EA7EED300D856BC /* ResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
 		E25A64A11EA7EED300D856BC /* ResultsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsVC.xib; sourceTree = "<group>"; };
 		E25A64A41EA8005100D856BC /* ResultTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTVCell.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		E2794A841E846D4600CE481A /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		E2794A861E8C616800CE481A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E2794A881E8C62BD00CE481A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E2BF35181ECB8AD700A5A3DF /* FlashCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardVC.swift; sourceTree = "<group>"; };
 		E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireVC.swift; sourceTree = "<group>"; };
 		E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireAnalyzer.swift; sourceTree = "<group>"; };
 		E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireModel.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				E2407AC41E831279003087AF /* MusicBarVC.xib */,
 				E2407AC11E82F739003087AF /* MeditateViewController.swift */,
 				E21A64131EAEEA7500E99617 /* InformationVC.swift */,
+				E2BF35181ECB8AD700A5A3DF /* FlashCardVC.swift */,
 				E21A539C1EAA9CD300657823 /* SleepDiaryVC.swift */,
 				E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */,
 				E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */,
@@ -146,6 +151,7 @@
 				E25A64A61EA80ADC00D856BC /* ResultTVCell.xib */,
 				E2407AAC1E79DB1A003087AF /* Main.storyboard */,
 				E2407AB21E79DB1A003087AF /* Assets.xcassets */,
+				E24778AA1EC3AC0F00B67FE4 /* KDCircularProgress.swift */,
 				E2407AB41E79DB1A003087AF /* LaunchScreen.storyboard */,
 				E2407AB71E79DB1A003087AF /* Info.plist */,
 				E2407AAF1E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld */,
@@ -299,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24778AB1EC3AC0F00B67FE4 /* KDCircularProgress.swift in Sources */,
 				E2F0740B1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift in Sources */,
 				E2407AC21E82F739003087AF /* MeditateViewController.swift in Sources */,
 				E2794A871E8C616A00CE481A /* AppConstants.swift in Sources */,
@@ -315,6 +322,7 @@
 				E21A539D1EAA9CD400657823 /* SleepDiaryVC.swift in Sources */,
 				E2407AC91E832DCF003087AF /* MusicPlayerViewController.swift in Sources */,
 				E2407AB11E79DB1A003087AF /* SleepDoctorMobile.xcdatamodeld in Sources */,
+				E2BF35191ECB8AD700A5A3DF /* FlashCardVC.swift in Sources */,
 				E2407AA91E79DB1A003087AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

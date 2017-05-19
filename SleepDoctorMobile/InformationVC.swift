@@ -10,15 +10,14 @@ import UIKit
 
 class InformationVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var disorderArray = ["Sleep Apnea",
-                         "Insomnia",
-                         "Narcolepsy",
-                         "RLS"]
+    var disorderArray = FlashCardModel().disorders
     
     var descriptionArray = ["A condition where breathing stops for periods of time during the night.",
                             "A condition where you have trouble falling asleep at night",
                             "A condition where you suddenly fall asleep during waking hours.",
                             "A condition where you have trouble stopping movement of your body at night."]
+    
+    let allCards = FlashCardModel().allCards()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,20 +60,40 @@ class InformationVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Push a detail view
-        let detailVC = DisorderDetailVC()
-        detailVC.titleString = disorderArray[indexPath.row]
-        detailVC.descriptionString = descriptionArray[indexPath.row]
+        //let detailVC = DisorderDetailVC()
+        //detailVC.titleString = disorderArray[indexPath.row]
+        //detailVC.descriptionString = descriptionArray[indexPath.row]
         
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        //self.navigationController?.pushViewController(detailVC, animated: true)
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        switch segue.identifier! {
+        case "pushSleepApnea":
+            print("pushing sleepapnea")
+            // Set the cards to the sleep apnea cards
+            let dvc = segue.destination as! DisorderDetailVC
+            dvc.disorderCards = allCards[0]
+        case "pushInsomnia":
+            print("pushing insomnia")
+            let dvc = segue.destination as! DisorderDetailVC
+            dvc.disorderCards = allCards[1]
+        case "pushNarcolepsy":
+            print("Pushing narcolepsy")
+            let dvc = segue.destination as! DisorderDetailVC
+            dvc.disorderCards = allCards[2]
+        case "pushRestlessLeg":
+            print("pushing Restless leg")
+            let dvc = segue.destination as! DisorderDetailVC
+            dvc.disorderCards = allCards[3]
+        default:
+            print("None of the above ya goober")
+        }        
     }
-    */
-
 }

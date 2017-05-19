@@ -8,13 +8,105 @@
 
 import UIKit
 
-class QuestionnaireVC: UIViewController {
+class QuestionnaireIntroVC: UIViewController {
+    
+    @IBOutlet weak var startQuestionnaireButton: UIButton!
+    @IBOutlet weak var circularProgressView: KDCircularProgress!
+    @IBOutlet weak var percentLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startQuestionnaireButton.layer.cornerRadius = 8.0
+        
+        /*
+        let progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        progress.startAngle = -90
+        progress.progressThickness = 0.2
+        progress.trackThickness = 0.6
+        progress.clockwise = true
+        progress.gradientRotateSpeed = 2
+        progress.roundedCorners = false
+        progress.glowMode = .forward
+        progress.glowAmount = 0.9
+        progress.set(colors: UIColor.cyan ,UIColor.white, UIColor.magenta, UIColor.white, UIColor.orange)
+        progress.center = CGPoint(x: circularProgressView.center.x, y: circularProgressView.center.y + 25)
+        circularProgressView.addSubview(progress)
+ */
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setProgress()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        /*
+        let progress = KDCircularProgress(frame: circularProgressView.frame)
+        progress.startAngle = -90
+        progress.progressThickness = 0.2
+        progress.trackThickness = 0.6
+        progress.clockwise = true
+        progress.gradientRotateSpeed = 2
+        progress.roundedCorners = false
+        progress.glowMode = .forward
+        progress.glowAmount = 0.9
+        progress.set(colors: UIColor.cyan ,UIColor.white, UIColor.magenta, UIColor.white, UIColor.orange)
+        */
+        //progress.center = CGPoint(x: circularProgressView.center.x, y: circularProgressView.center.y + 25)
+        //circularProgressView = progress
+    }
+    
+    @IBAction func tappedResetAllAnswers(_ sender: Any) {
+        
+        let a = UIAlertController.init(title: "Reset all answers?", message: "Would you like to reset all of your questionnaire answers? You will be required to take the questionnaire from the beginning.", preferredStyle: .alert)
+        
+        //a.view.backgroundColor = UIColor.blackColor()
+        //a.view.tintColor = UIColor.blueColor()
+        
+        let okAction = UIAlertAction(title: "Reset", style: UIAlertActionStyle.destructive) {
+            UIAlertAction in
+            print("Reset all of the answers")
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (UIAlertAction) in
+            print("User tapped cancel, don't do anything")
+        }
+        
+        a.addAction(okAction)
+        a.addAction(cancelAction)
+        
+        self.present(a, animated: true, completion: nil)
+    }
+    
+    
+    func setProgress() {
+        // TODO: Check the current progress then
+        let questionIndex:Int? = UserDefaults.standard.integer(forKey: questionIndexKey)
+        if let index = questionIndex {
+            //Float(index)/41.0
+            //circularProgressView.progres
+            let progress = Int((Float(index) / 55.0) * 100)
+            print("Progress in value", progress)
+            //TODO: Set progress label percentage.
+            percentLabel.text = String(progress) + "%"
+            let progressAngle = (Double(index) / 55.0) * 360.0
+            
+            circularProgressView.animate(fromAngle: 0.0, toAngle: progressAngle, duration: 0.5, completion: nil)
+            //circularProgressView.angle = progressAngle
+        } else {
+            print("No current progress derpaderp")
+        }
+    }
+}
 
+class QuestionnaireVC: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nextQuestionButton: UIButton!
     @IBOutlet weak var previousQuestionButton: UIButton!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     // Group 1 - UI Elements for the intro view
     @IBOutlet weak var nameField: UITextField!
@@ -35,7 +127,6 @@ class QuestionnaireVC: UIViewController {
     @IBOutlet weak var threeButton: UIButton!
     @IBOutlet weak var fourButton: UIButton!
     @IBOutlet weak var fiveButton: UIButton! // Removed, only need 1-4
-    
     
     // Intro Value Trackers
     var gender:Gender?
@@ -76,8 +167,6 @@ class QuestionnaireVC: UIViewController {
         noButton.layer.masksToBounds = true
         
         
-        
-        
         // Format number buttons
         let numberButtonArray = [oneButton, twoButton, threeButton, fourButton, fiveButton]
         
@@ -98,6 +187,7 @@ class QuestionnaireVC: UIViewController {
             
             // TODO: Insert check for which type of question (determines which UI Group to show)
             setupView(forIndex: qIndex)
+            checkProgress()
             
         } else {
             // No existing question index. Start from scratch.
@@ -112,14 +202,23 @@ class QuestionnaireVC: UIViewController {
         let results = analyzer.analyzeQuestionnaireResults()
         
         let resultsVC = ResultsVC.init(results: results)
-        self.present(resultsVC, animated: true, completion: nil)
+        let resultsNav = UINavigationController.init(rootViewController: resultsVC)
+        self.present(resultsNav, animated: true, completion: nil)
         
     }
     
+    func checkProgress() -> Float {
+        // TODO: Check the current progress then
+        if let index = questionIndex {
+        return Float(index)/55.0
+        } else {
+            return 0.0
+        }
+    }
     
-    /*****
-     ************ MARK: UI Element Controls *****************
-     *****/
+    /*********************************/
+    // MARK: UI Element Controls
+    /*********************************/
     
     func hideGroupOne() {
         // Hide Group 1 UI Elements
@@ -174,13 +273,12 @@ class QuestionnaireVC: UIViewController {
         epworthPrompt.isHidden = false
     }
     
-    
-    /*****
-     ************ MARK: Questionairre Initializer Fuctions *****************
-     *****/
+    /***************************************/
+    // MARK: Questionairre Initializer Fuctions
+    /***************************************/
     
     func setupView(forIndex:Int) {
-        guard (forIndex <= 41) else {
+        guard (forIndex <= 55) else {
             print("End of the rope! Trigger End Sequence!")
             
             let a = UIAlertController.init(title: "Questionnaire Complete"  , message: "We've analyzed your responses and your results are ready. Tap \"View Results\" to see a summary.", preferredStyle: .alert)
@@ -202,6 +300,10 @@ class QuestionnaireVC: UIViewController {
         }
         
         // TODO: This reinitializes the view when a new question shows up.
+        
+        // set the new progress bar value
+        let newProgress = checkProgress()
+        progressBar.setProgress(newProgress, animated: true)
         
         // reset responseRecorded and numberResponseRecorded
         responseRecorded = nil
@@ -280,9 +382,9 @@ class QuestionnaireVC: UIViewController {
         switch forIndex {
         case 0:
             return QuestionType.other
-        case 1...34:
+        case 1...48:
             return QuestionType.yesNo
-        case 35...42:
+        case 49...56:
             return QuestionType.oneToFive
         default:
             return QuestionType.other
@@ -296,14 +398,15 @@ class QuestionnaireVC: UIViewController {
     
     @IBAction func tappedNext(_ sender: Any) {
         print("Tapped Next")
-        guard (questionIndex! <= 41) else {
+        guard (questionIndex! <= 55) else {
             print("Present the results view modally!!")
             
             let analyzer = QuestionnaireAnalyzer()
             let results = analyzer.analyzeQuestionnaireResults()
             
             let resultsVC = ResultsVC.init(results: results)
-            self.present(resultsVC, animated: true, completion: nil)
+            let resultsNav = UINavigationController.init(rootViewController: resultsVC)
+            self.present(resultsNav, animated: true, completion: nil)
             
             return
         }
@@ -320,6 +423,7 @@ class QuestionnaireVC: UIViewController {
                     
                 // TODO: UNLESS the index is > 40 (or whatever the last question is)...trigger the end sequence in this case!
                 questionIndex! += 1
+                UserDefaults.standard.set(questionIndex!, forKey: questionIndexKey)
                 setupView(forIndex: questionIndex!)
                 
             } else {
@@ -330,17 +434,15 @@ class QuestionnaireVC: UIViewController {
         } else if (questionType == .oneToFive) {
             if let numberResponse = numberResponseRecorded {
 
-                    recordNumberAnswer(forQuestionIndex: questionIndex!, withResponse: numberResponse)
+                recordNumberAnswer(forQuestionIndex: questionIndex!, withResponse: numberResponse)
 
                 // TODO: UNLESS the index is > 40 (or whatever the last question is)...trigger the end sequence in this case!
-                    questionIndex! += 1
-                    setupView(forIndex: questionIndex!)
-                
-                
+                questionIndex! += 1
+                UserDefaults.standard.set(questionIndex!, forKey: questionIndexKey)
+                setupView(forIndex: questionIndex!)
                 
             } else {
                 // TODO: No Response Recorded Yet, tell user to record a response with an alert.
-                
                 // Popup Alert
             }
         } else if (questionType == .other) {
