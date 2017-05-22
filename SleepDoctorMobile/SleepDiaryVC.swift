@@ -48,7 +48,6 @@ class SleepDiaryVC: UIViewController {
     @IBOutlet weak var night13Button: UIButton!
     @IBOutlet weak var night14Button: UIButton! // Tag = 14
     
-    
     /*
      *** MARK: Entry Controls Outlets
      */
@@ -65,18 +64,15 @@ class SleepDiaryVC: UIViewController {
     @IBOutlet weak var woke1Button: UIButton!
     @IBOutlet weak var woke2Button: UIButton!
     
-    
     /*
      *** MARK: Overall Control Outlets
      */
     @IBOutlet weak var beginDiaryButton: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateEntryButton.layer.cornerRadius = 12.0
+        //updateEntryButton.layer.cornerRadius = 12.0
         beginDiaryButton.layer.cornerRadius  = 12.0
         
         // Format Night Buttons
@@ -106,9 +102,17 @@ class SleepDiaryVC: UIViewController {
         }
         
         
+        // TODO: Check with SleepDiaryRealm if there is already an active diary (will need to do a query of all diary objects that are active)
+        var sleepDiary = SleepDiaryRealm().getCurrentDiary()
         
-
-        // Do any additional setup after loading the view.
+        if let diaryObject = sleepDiary {
+            print("We've got an active sleep diary!")
+            // Init the view with the diary's data
+        } else {
+            print("There is no active sleep diary!")
+            // Set up view for user to activate the sleep diary
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -124,15 +128,44 @@ class SleepDiaryVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
-    /*
+    func enableAllNightButtons() {
+        let nightButtonArray = [night1Button,  night2Button,  night3Button,
+                                night4Button,  night5Button,  night6Button,
+                                night7Button,  night8Button,  night9Button,
+                                night10Button, night11Button, night12Button,
+                                night13Button, night14Button]
+        
+        for (index, button) in nightButtonArray.enumerated() {
+            // Disable all night buttons
+            button?.isEnabled = true
+        }
+    }
+    
+    func disableAllNightButtons() {
+        let nightButtonArray = [night1Button,  night2Button,  night3Button,
+                                night4Button,  night5Button,  night6Button,
+                                night7Button,  night8Button,  night9Button,
+                                night10Button, night11Button, night12Button,
+                                night13Button, night14Button]
+        
+        for (index, button) in nightButtonArray.enumerated() {
+            // Disable all night buttons
+            button?.isEnabled = false
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "pushDiaryEntry") {
+            var dvc = segue.destination as! SleepDiaryVC
+            print("pushing the diary entry view controller")
+            // TODO: Grab the diary entry object from SleepDiaryRealm and pass it to the dvc            
+        }
     }
-    */
+    
 
 }
