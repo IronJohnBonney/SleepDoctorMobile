@@ -12,17 +12,24 @@ class InformationVC: UIViewController, UITableViewDataSource, UITableViewDelegat
 
     var disorderArray = FlashCardModel().disorders
     
-    var descriptionArray = ["A condition where breathing stops for periods of time during the night.",
-                            "A condition where you have trouble falling asleep at night",
-                            "A condition where you suddenly fall asleep during waking hours.",
-                            "A condition where you have trouble stopping movement of your body at night."]
-    
     let allCards = FlashCardModel().allCards()
+    
+    @IBOutlet weak var sleepApneaButton: UIButton!
+    @IBOutlet weak var narcolepsyButton: UIButton!
+    @IBOutlet weak var rlsButton: UIButton!
+    @IBOutlet weak var insomniaButton: UIButton!
+    @IBOutlet weak var parasomniaButton: UIButton!
+    @IBOutlet weak var sleepHygieneButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let buttonArray = [sleepApneaButton, narcolepsyButton, rlsButton, insomniaButton, parasomniaButton, sleepHygieneButton]
+        
+        for (index, button) in buttonArray.enumerated() {
+            button?.layer.cornerRadius = 8.0
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +48,7 @@ class InformationVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         let descriptionLabel = cell.viewWithTag(2) as! UILabel
         
         titleLabel.text = disorderArray[indexPath.row]
-        descriptionLabel.text = descriptionArray[indexPath.row]
+        //descriptionLabel.text = descriptionArray[indexPath.row]
         
         return cell
     }
@@ -92,6 +99,14 @@ class InformationVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             print("pushing Restless leg")
             let dvc = segue.destination as! DisorderDetailVC
             dvc.disorderCards = allCards[3]
+        case "pushParasomnia":
+            print("pushing parasomnia leg")
+            let dvc = segue.destination as! DisorderDetailVC
+            dvc.disorderCards = allCards[4]
+        case "pushSleepHygiene":
+            print("pushing sleepHygiene leg")
+            let dvc = segue.destination as! DisorderDetailVC
+            dvc.disorderCards = FlashCardModel().sleepHygieneCards
         default:
             print("None of the above ya goober")
         }        

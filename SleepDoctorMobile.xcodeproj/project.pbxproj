@@ -34,6 +34,7 @@
 		E2794A871E8C616A00CE481A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A861E8C616800CE481A /* AppConstants.swift */; };
 		E2794A891E8C62BD00CE481A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2794A881E8C62BD00CE481A /* HomeViewController.swift */; };
 		E2BF35191ECB8AD700A5A3DF /* FlashCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BF35181ECB8AD700A5A3DF /* FlashCardVC.swift */; };
+		E2D845EF1EDF5B2A00779F91 /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D845EE1EDF5B2900779F91 /* FlashCardModel.swift */; };
 		E2F074091EA6ABF2004ADE22 /* QuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */; };
 		E2F0740B1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */; };
 		E2F0740D1EA6D3D4004ADE22 /* QuestionnaireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */; };
@@ -71,6 +72,7 @@
 		E2794A861E8C616800CE481A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E2794A881E8C62BD00CE481A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2BF35181ECB8AD700A5A3DF /* FlashCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardVC.swift; sourceTree = "<group>"; };
+		E2D845EE1EDF5B2900779F91 /* FlashCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
 		E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireVC.swift; sourceTree = "<group>"; };
 		E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireAnalyzer.swift; sourceTree = "<group>"; };
 		E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireModel.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				E2663F6D1ED37C42005193E8 /* DiaryEntryVC.swift */,
 				E2F074081EA6ABF2004ADE22 /* QuestionnaireVC.swift */,
 				E2F0740C1EA6D3D4004ADE22 /* QuestionnaireModel.swift */,
+				E2D845EE1EDF5B2900779F91 /* FlashCardModel.swift */,
 				E2F0740A1EA6C57E004ADE22 /* QuestionnaireAnalyzer.swift */,
 				E25A64A01EA7EED300D856BC /* ResultsVC.swift */,
 				E25A64A11EA7EED300D856BC /* ResultsVC.xib */,
@@ -317,6 +320,7 @@
 				E2794A851E846D4600CE481A /* MusicPlayer.swift in Sources */,
 				E2407AC51E831279003087AF /* MusicBarVC.swift in Sources */,
 				E2794A891E8C62BD00CE481A /* HomeViewController.swift in Sources */,
+				E2D845EF1EDF5B2A00779F91 /* FlashCardModel.swift in Sources */,
 				E25A64A21EA7EED300D856BC /* ResultsVC.swift in Sources */,
 				E21A64111EAEE2D300E99617 /* DisorderDetailVC.swift in Sources */,
 				E2F0740D1EA6D3D4004ADE22 /* QuestionnaireModel.swift in Sources */,

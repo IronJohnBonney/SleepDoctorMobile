@@ -67,6 +67,11 @@ class QuestionnaireIntroVC: UIViewController {
         let okAction = UIAlertAction(title: "Reset", style: UIAlertActionStyle.destructive) {
             UIAlertAction in
             print("Reset all of the answers")
+            QuestionnaireAnalyzer().resetAllResponses()
+            print("All responses have been reset.")
+            // Update view to accomodate for the changes. This actually means just resetting
+            //      the circular progress view to 0%
+            self.setProgress()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (UIAlertAction) in
@@ -88,12 +93,18 @@ class QuestionnaireIntroVC: UIViewController {
             //circularProgressView.progres
             let progress = Int((Float(index) / 55.0) * 100)
             print("Progress in value", progress)
-            //TODO: Set progress label percentage.
-            percentLabel.text = String(progress) + "%"
-            let progressAngle = (Double(index) / 55.0) * 360.0
             
-            circularProgressView.animate(fromAngle: 0.0, toAngle: progressAngle, duration: 0.5, completion: nil)
-            //circularProgressView.angle = progressAngle
+            // Set progress label percentage. If progress >= 100, just set it to be full.
+            if (progress >= 100) {
+                percentLabel.text = "100%"
+                let progressAngle = 360.0
+                circularProgressView.animate(fromAngle: 0.0, toAngle: progressAngle, duration: 0.5, completion: nil)
+            } else {
+                percentLabel.text = String(progress) + "%"
+                let progressAngle = (Double(index) / 55.0) * 360.0
+                circularProgressView.animate(fromAngle: 0.0, toAngle: progressAngle, duration: 0.5, completion: nil)
+            }
+            
         } else {
             print("No current progress derpaderp")
         }
@@ -280,6 +291,11 @@ class QuestionnaireVC: UIViewController {
     func setupView(forIndex:Int) {
         guard (forIndex <= 55) else {
             print("End of the rope! Trigger End Sequence!")
+            
+            // Hide all UIElements for the questionnaire
+            hideGroupOne()
+            hideGroupTwo()
+            hideGroupThree()
             
             let a = UIAlertController.init(title: "Questionnaire Complete"  , message: "We've analyzed your responses and your results are ready. Tap \"View Results\" to see a summary.", preferredStyle: .alert)
             

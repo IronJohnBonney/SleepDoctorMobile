@@ -24,11 +24,16 @@ class QuestionnaireAnalyzer: NSObject {
     var daytimeSleepinessScore = 0
 
     public func resetAllResponses() {
+        /*
         let defaults = UserDefaults.standard
         for i in 1...56 {
             // Set all of these Response User Defaults to nil
             let questionIndexKey = "question" + String(i) + "Response"
-            defaults.set(nil, forKey: questionIndexKey)
+            defaults.removeObject(forKey: questionIndexKey)
+        }
+        */
+        if let bundle = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundle)
         }
     }
     
@@ -45,7 +50,12 @@ class QuestionnaireAnalyzer: NSObject {
         
         // Disorder Array Format: [sleepApnea, insomnia, RLS, narcolepsy]
         // TODO: Change the return type to a Questionnaire results struct
-        return [hasSleepApnea, hasInsomnia, hasRLS, hasNarcolepsy]
+        return [hasSleepApnea, hasInsomnia, hasRLS, hasNarcolepsy, hasParasomnia]
+    }
+    
+    public func getDaytimeSleepinessScore() -> Int {
+        daytimeSleepinessScore = analyzeNumberSurvey()
+        return daytimeSleepinessScore
     }
     
     fileprivate func analyzeSleepApneaResponses() -> Bool {
@@ -148,7 +158,7 @@ class QuestionnaireAnalyzer: NSObject {
             }
         }
         
-        if (yesCount >= 2) {
+        if (yesCount >= 1) {
             return true
         } else {
             return false
@@ -189,6 +199,8 @@ class QuestionnaireAnalyzer: NSObject {
             
             score += questionResponse
         }
+        
+        print("Here's your sleepiness score: ", score)
         
         // TODO: Need to consider making several ranges, or just returning the score out of 32, but maybe scale it from 1-100?
         return score

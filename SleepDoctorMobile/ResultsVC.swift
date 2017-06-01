@@ -20,6 +20,9 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var resultsTableView: UITableView!
     @IBOutlet weak var sleepHygieneButton: UIButton!
+    @IBOutlet weak var daytimeSleepinessScoreLabel: UILabel!
+    
+    
     
     // Used to pass to the results VC
     var disorderCards = FlashCardModel().allCards()
@@ -29,12 +32,14 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var disorderArray = ["Sleep Apnea",
                          "Insomnia",
                          "Narcolepsy",
-                         "RLS"]
+                         "RLS",
+                         "Parasomnia"]
     
     var descriptionArray = ["A condition where breathing stops for periods of time during the night.",
                             "A condition where you have trouble falling asleep at night",
                             "A condition where you suddenly fall asleep during waking hours.",
-                            "A condition where you have trouble stopping movement of your body at night."]
+                            "A condition where you have trouble stopping movement of your body at night.",
+                            "A condition where you frequently experience vivid dreamlike sequences."]
     
     init(results: [Bool]) {
         self.resultsArray = results
@@ -58,6 +63,10 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //
         resultsTableView.contentInset = UIEdgeInsetsMake(-20.0, 0.0, 0.0, 0.0)
         
+        sleepHygieneButton.layer.cornerRadius = 8.0
+        
+        let sleepinessScoreString = String(QuestionnaireAnalyzer().getDaytimeSleepinessScore())
+        daytimeSleepinessScoreLabel.text = "\(sleepinessScoreString)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +85,13 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func tappedSleepHygieneButton(_ sender: Any) {
         print("Push the sleep hygiene flash Card View")
+        let hygieneCards = FlashCardModel().sleepHygieneCards
+        
+        let detailVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailVC") as! DisorderDetailVC
+        detailVC.disorderCards = hygieneCards
+        
+        // Push the detail view
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -112,7 +128,7 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return disorderArray.count
+        return resultsArray!.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

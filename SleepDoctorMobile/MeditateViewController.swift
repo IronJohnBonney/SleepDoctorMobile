@@ -15,12 +15,12 @@ class MeditateViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var trackTableView: UITableView!
 
     
-    let trackNames        = ["Yoga Nidra",
+    let trackNames        = ["Sleep Relaxation",
                              "Mindful Deep Breathing",
                              "Mantra Meditation",
                              "Massage Relaxation"]
     
-    let trackDescriptions = ["Guided Meditation for Relaxation before Sleep",
+    let trackDescriptions = ["Inspired from Yoga Nidra",
                              "A Deep Breathing Meditation Technique",
                              "Traditional Mantra Meditation",
                              "A Massage Muscle Relaxation Technique"]

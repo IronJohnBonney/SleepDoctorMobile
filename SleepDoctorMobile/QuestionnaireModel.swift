@@ -8,64 +8,6 @@
 
 import UIKit
 
-struct FlashCard {
-    let title:String
-    let description:String
-}
-
-class FlashCardModel {
-    
-    // The disorder array below is for building the list of disorder buttons that can be tapped to see the flash cards.
-    let disorders = ["Sleep Apnea",
-                     "Insomnia",
-                     "Narcolepsy",
-                     "Restless Leg Syndrome"]
-    
-    
-    // The variables below set all of the flashcard text (front and back) for each of the sleep disorder detail views. For each disorder there are 4 cards.
-    let sleepApneaCards = [FlashCard.init(title: "What is Sleep Apnea?",
-                                          description: "Sleep Apnea is a condition where you stop breating for periods of time at night"),
-                           FlashCard.init(title: "Treatment",
-                                          description: "This is how you treat sleep apnea"),
-                           FlashCard.init(title: "Risk Factors",
-                                          description:"These are the factors that mean you may be at high risk of having sleep apnea"),
-                           FlashCard.init(title: "Symptoms",
-                                          description: "You may have a dry mouth at night, you may stop breathing at night, and you may saw logs.")]
-    
-    let insomniaCards   = [FlashCard.init(title: "What is Insomnia?",
-                                          description: "Insomnia is a condition where you can't fall asleep at night."),
-                           FlashCard.init(title: "Treatment",
-                                          description: "This is how you treat insomnia"),
-                           FlashCard.init(title: "Risk Factors",
-                                          description:"These are the factors that mean you may be at high risk of having insomnia"),
-                           FlashCard.init(title: "Symptoms",
-                                          description: "Trouble falling asleep at night, daytime sleepiness.")]
-    
-    let narcolepsyCards = [FlashCard.init(title: "What is Narcolepsy?",
-                                          description: "Narcolepsy is a condition where you fall asleep uncontrollably during waking hours."),
-                           FlashCard.init(title: "Treatment",
-                                          description: "This is how you treat narcolepsy"),
-                           FlashCard.init(title: "Risk Factors",
-                                          description:"These are the factors that mean you may be at high risk of having narcolepsy"),
-                           FlashCard.init(title: "Symptoms",
-                                          description: "You may experience sudden fits of sleep, your muscles may go limp at times throughout the day.")]
-    
-    let rlsCards        = [FlashCard.init(title: "What is RLS?",
-                                          description: "Restless Leg syndrome is a condition where you kick you can't stop moving your legs throughout the night."),
-                           FlashCard.init(title: "Treatment",
-                                          description: "This is how you treat RLS"),
-                           FlashCard.init(title: "Risk Factors",
-                                          description:"These are the factors that mean you may be at high risk of having RLS"),
-                           FlashCard.init(title: "Symptoms",
-                                          description: "You may experience an aching, crawling sensation in your legs as you fall asleep at night, an an inability to stop moving your legs.")]
-    
-    func allCards() -> [[FlashCard]] {
-        let allCards = [sleepApneaCards, insomniaCards, narcolepsyCards, rlsCards]
-        return allCards
-    }
-    
-}
-
 class QuestionnaireModel: NSObject {
     
     let promptArray:[String] = ["We'll start by collecting some basic information on you and your sleep patterns.",

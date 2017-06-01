@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsVC" customModule="SleepDoctorMobile" customModuleProvider="target">
             <connections>
+                <outlet property="daytimeSleepinessScoreLabel" destination="xsG-r2-29A" id="xY1-dZ-Afd"/>
                 <outlet property="resultsTableView" destination="wq9-LK-K0M" id="ORg-2O-Dco"/>
                 <outlet property="sleepHygieneButton" destination="weC-mA-aLZ" id="rH3-Sb-GIz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
