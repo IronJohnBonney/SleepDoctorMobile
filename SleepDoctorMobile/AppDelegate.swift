@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 import LNPopupController
 import IQKeyboardManagerSwift
+import AVFoundation
+import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

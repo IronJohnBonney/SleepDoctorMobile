@@ -44,7 +44,7 @@ class FlashCardVC: UIViewController {
         //frontTextView = UITextView.init(frame: self.view.bounds)
         //frontTextView?.text = "Here's the front of the text view!"
         //frontTextView?.isEditable = false
-        frontTextLabel = UILabel.init(frame: CGRect(x: 0.0, y: 100.0, width: 300.0, height: 100.0))
+        frontTextLabel = UILabel.init(frame: CGRect(x: 0.0, y: 0.0, width: 300.0, height: 300.0))
         // TODO: This text will be fed into the view by the disorder VC upon initialization
         frontTextLabel?.text = titleString!
         frontTextLabel?.textColor = UIColor.white
@@ -53,7 +53,7 @@ class FlashCardVC: UIViewController {
         frontTextLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 30.0)
         frontTextLabel?.numberOfLines = 0
         
-        backTextLabel = UILabel.init(frame: CGRect(x: 0.0, y: 25.0, width: 300.0, height: 250.0))
+        backTextLabel = UILabel.init(frame: CGRect(x: 0.0, y: 0.0, width: 300.0, height: 300.0))
         // TODO: This text will be fed into the view by the disorder VC upon initialization
         backTextLabel?.text = detailString!
         backTextLabel?.textAlignment = NSTextAlignment.center
@@ -80,8 +80,8 @@ class FlashCardVC: UIViewController {
     override func viewDidLayoutSubviews() {
         print("Did layout subviews!")
         // Force text label to the frame so that it's not accidentally getting reset
-        frontTextLabel?.frame = CGRect(x: 0.0, y: 100.0, width: 300.0, height: 100.0)
-        backTextLabel?.frame = CGRect(x: 0.0, y: 25.0, width: 300.0, height: 250.0)
+        frontTextLabel?.frame = CGRect(x: 0.0, y: 0.0, width: 300.0, height: 300.0)
+        backTextLabel?.frame = CGRect(x: 0.0, y: 0.0, width: 300.0, height: 300.0)
     }
     
     func flip() {

@@ -10,6 +10,8 @@ import UIKit
 
 class DiaryEntryVC: UIViewController {
     
+    var closure:(()->())? = nil
+    
     let secondsInDay = 60*60*24
     
     let sleepDiaryRealm = SleepDiaryRealm()
@@ -59,6 +61,12 @@ class DiaryEntryVC: UIViewController {
         let minutesSlept = (diaryEntry?.minutesAsleep)! - (hoursSlept * 60)
         timeAsleepLabel.text = "\(hoursSlept)hr \(minutesSlept)min"
         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if let closure = closure {
+            closure()
+        }
     }
 
     override func didReceiveMemoryWarning() {

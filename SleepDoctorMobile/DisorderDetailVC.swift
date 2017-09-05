@@ -27,6 +27,16 @@ class DisorderDetailVC: UIViewController {
     var flashCard8:FlashCardVC?
     var flashCard9:FlashCardVC?
     var flashCard10:FlashCardVC?
+    var flashCard11:FlashCardVC?
+    var flashCard12:FlashCardVC?
+    var flashCard13:FlashCardVC?
+    var flashCard14:FlashCardVC?
+    var flashCard15:FlashCardVC?
+    var flashCard16:FlashCardVC?
+    var flashCard17:FlashCardVC?
+    var flashCard18:FlashCardVC?
+    var flashCard19:FlashCardVC?
+    var flashCard20:FlashCardVC?
     
     // Create some Card View Constants
     let cardPadding = Float(30.0)
@@ -62,6 +72,26 @@ class DisorderDetailVC: UIViewController {
                                       descriptionString: "Filler")
         flashCard10 = FlashCardVC.init(withTitleString: "Filler",
                                       descriptionString: "Filler")
+        flashCard11 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard12 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard13 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard14 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard15 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard16 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard17 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard18 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard19 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard20 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
         
         
         super.init(nibName: nil, bundle: nil)
@@ -89,6 +119,26 @@ class DisorderDetailVC: UIViewController {
         flashCard9 = FlashCardVC.init(withTitleString: "Filler",
                                       descriptionString: "Filler")
         flashCard10 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard11 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard12 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard13 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard14 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard15 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard16 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard17 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard18 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard19 = FlashCardVC.init(withTitleString: "Filler",
+                                       descriptionString: "Filler")
+        flashCard20 = FlashCardVC.init(withTitleString: "Filler",
                                        descriptionString: "Filler")
         
         super.init(coder: aDecoder)
@@ -167,6 +217,36 @@ class DisorderDetailVC: UIViewController {
             case 9:
                 flashCard10 = newFlashCardVC
                 cardArray.append(flashCard10!)
+            case 10:
+                flashCard11 = newFlashCardVC
+                cardArray.append(flashCard11!)
+            case 11:
+                flashCard12 = newFlashCardVC
+                cardArray.append(flashCard12!)
+            case 12:
+                flashCard13 = newFlashCardVC
+                cardArray.append(flashCard13!)
+            case 13:
+                flashCard14 = newFlashCardVC
+                cardArray.append(flashCard14!)
+            case 14:
+                flashCard15 = newFlashCardVC
+                cardArray.append(flashCard15!)
+            case 15:
+                flashCard16 = newFlashCardVC
+                cardArray.append(flashCard16!)
+            case 16:
+                flashCard17 = newFlashCardVC
+                cardArray.append(flashCard17!)
+            case 17:
+                flashCard18 = newFlashCardVC
+                cardArray.append(flashCard18!)
+            case 18:
+                flashCard19 = newFlashCardVC
+                cardArray.append(flashCard19!)
+            case 19:
+                flashCard20 = newFlashCardVC
+                cardArray.append(flashCard20!)                
             default:
                 print("Default case inside the flash card array builder!")
             }

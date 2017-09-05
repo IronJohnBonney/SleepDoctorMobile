@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,6 +18,7 @@
                 <outlet property="trackImage" destination="8Vf-FX-GDx" id="4wH-pf-pOE"/>
                 <outlet property="trackNameLabel" destination="aDN-Lk-xNu" id="suJ-wo-Hsa"/>
                 <outlet property="trackProgressBar" destination="q4r-4s-3qh" id="i24-Xo-Q69"/>
+                <outlet property="trackProgressSlider" destination="61v-Qt-05H" id="Sr2-cl-t3I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,19 +49,16 @@
                     <rect key="frame" x="14" y="617" width="347" height="31"/>
                     <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.39864309209999998" green="0.3946254797" blue="0.38295812769999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="didMoveSlider:" destination="-1" eventType="touchUpInside" id="nI9-Yl-1dj"/>
+                        <action selector="didSlideSlider:" destination="-1" eventType="valueChanged" id="vQX-cb-UKU"/>
+                    </connections>
                 </slider>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="q4r-4s-3qh">
-                    <rect key="frame" x="16" y="448" width="343" height="2"/>
+                    <rect key="frame" x="0.0" y="448" width="375" height="2"/>
                     <color key="progressTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="trackTintColor" red="0.39864309209999998" green="0.3946254797" blue="0.38295812769999998" alpha="1" colorSpace="calibratedRGB"/>
                 </progressView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:42/13:26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssl-Vv-5Nq">
-                    <rect key="frame" x="32" y="463" width="310" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgR-af-lgP">
                     <rect key="frame" x="153" y="526" width="70" height="70"/>
                     <subviews>
@@ -103,7 +101,7 @@
             <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="61v-Qt-05H" firstAttribute="top" secondItem="CgR-af-lgP" secondAttribute="bottom" constant="21" id="8IY-bm-Jed"/>
-                <constraint firstItem="q4r-4s-3qh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="DoD-Zo-H1G"/>
+                <constraint firstItem="q4r-4s-3qh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DoD-Zo-H1G"/>
                 <constraint firstAttribute="trailing" secondItem="Ain-Sz-Bsf" secondAttribute="trailing" constant="32" id="FsE-Hu-XkK"/>
                 <constraint firstItem="Ain-Sz-Bsf" firstAttribute="centerX" secondItem="q4r-4s-3qh" secondAttribute="centerX" id="GX8-Wd-exl"/>
                 <constraint firstItem="q4r-4s-3qh" firstAttribute="top" secondItem="Ain-Sz-Bsf" secondAttribute="bottom" constant="15" id="IA0-Lw-ZZM"/>
@@ -113,7 +111,7 @@
                 <constraint firstAttribute="trailing" secondItem="61v-Qt-05H" secondAttribute="trailing" constant="16" id="M7k-nA-r1u"/>
                 <constraint firstItem="aDN-Lk-xNu" firstAttribute="top" secondItem="8Vf-FX-GDx" secondAttribute="bottom" constant="51" id="Tn6-ct-iqq"/>
                 <constraint firstItem="yG1-BZ-jnd" firstAttribute="leading" secondItem="8Vf-FX-GDx" secondAttribute="trailing" constant="-284" id="Wbe-Wu-uWa"/>
-                <constraint firstAttribute="trailing" secondItem="q4r-4s-3qh" secondAttribute="trailing" constant="16" id="X20-gB-F8r"/>
+                <constraint firstAttribute="trailing" secondItem="q4r-4s-3qh" secondAttribute="trailing" id="X20-gB-F8r"/>
                 <constraint firstItem="61v-Qt-05H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Y96-z9-Rqh"/>
                 <constraint firstItem="CgR-af-lgP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YuU-aJ-0ge"/>
                 <constraint firstItem="aDN-Lk-xNu" firstAttribute="centerX" secondItem="Ain-Sz-Bsf" secondAttribute="centerX" id="boS-Zp-XtT"/>

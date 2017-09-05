@@ -25,6 +25,11 @@ class MeditateViewController: UIViewController, UITableViewDelegate, UITableView
                              "Traditional Mantra Meditation",
                              "A Massage Muscle Relaxation Technique"]
     
+    let trackLengths      = ["12:53",
+                             "5:39",
+                             "8:33",
+                             "3:34"]
+    
     // The following stream strings will be passed to the music player to initialize the player with
     // a certain mp3.
     let streamStrings     = ["https://s3.amazonaws.com/sleep-doctor-mobile/Yoga-Nidra.mp3",
@@ -171,6 +176,9 @@ class MeditateViewController: UIViewController, UITableViewDelegate, UITableView
         
         let bgImageView = cell.viewWithTag(4) as! UIImageView
         bgImageView.image = trackImages[indexPath.row]
+        
+        let durationLabel = cell.viewWithTag(5) as! UILabel
+        durationLabel.text = trackLengths[indexPath.row]
         
         if (indexPath.row == 0) {
             // This will make the moon image look better.

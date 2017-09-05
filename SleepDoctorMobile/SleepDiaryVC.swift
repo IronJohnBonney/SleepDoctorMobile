@@ -235,6 +235,10 @@ class SleepDiaryVC: UIViewController {
         let button = sender as! UIButton
         let tag = button.tag
         tappedButton(withTag: tag)
+        selectedEntryIndex = (tag - 1)
+        
+        //TODO: Perform Segue to Edit screen, pass in withTag property
+        performSegue(withIdentifier: "pushDiaryEntry", sender: sender)
     }
     
     func formatSleepBars() {
@@ -268,6 +272,14 @@ class SleepDiaryVC: UIViewController {
             
             let newFrame = CGRect(x: scaledX, y: sleepBar.frame.origin.y, width: scaledWidth, height: sleepBar.frame.size.height)
             sleepBar.frame = newFrame
+            
+            // Check the sleep efficiency and set bar's color accordingly
+            if (entry.sleepEfficiency < 0.85) {
+                sleepBar.backgroundColor = UIColor.red
+            } else {
+                sleepBar.backgroundColor = UIColor.green
+            }
+            
             //Increment i and format the next bar
             i+=1
         }
@@ -277,13 +289,15 @@ class SleepDiaryVC: UIViewController {
     }
     
     func tappedButton(withTag:Int) {
+        
+        
         // Highlight that specific button, dehighlight all other buttons
-        highlightNightButton(withTag: withTag)
+        //highlightNightButton(withTag: withTag)
         //  Show the diary entry for that dates sleep/wake up times.
-        sleepTimePicker.date = activeSleepDiary?.entries[withTag - 1].fellAsleepTime as! Date
-        wakeTimePicker.date = activeSleepDiary?.entries[withTag - 1].wokeUpTime as! Date
+        //sleepTimePicker.date = activeSleepDiary?.entries[withTag - 1].fellAsleepTime as! Date
+        //wakeTimePicker.date = activeSleepDiary?.entries[withTag - 1].wokeUpTime as! Date
         // Set the selected Entry index
-        selectedEntryIndex = (withTag - 1)
+        //selectedEntryIndex = (withTag - 1)
     }
     
     func highlightNightButton(withTag: Int) {
@@ -317,7 +331,10 @@ class SleepDiaryVC: UIViewController {
             var dvc = segue.destination as! DiaryEntryVC
             print("pushing the diary entry view controller")
             // TODO: Grab the diary entry object from SleepDiaryRealm and pass it to the dvc
-            dvc.diaryEntry = activeSleepDiary?.entries[selectedEntryIndex]
+            dvc.diaryEntry = activeSleepDiary?.entries[(sender as! UIButton).tag - 1] //activeSleepDiary?.entries[selectedEntryIndex]
+            dvc.closure = { () in
+                self.formatSleepBars()
+            }
         }
     }
 }

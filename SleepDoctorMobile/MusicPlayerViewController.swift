@@ -14,8 +14,10 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
     static let shared: MusicPlayerViewController = MusicPlayerViewController()
     
     
-    
     @IBOutlet weak var trackProgressBar: UIProgressView!
+    @IBOutlet weak var trackProgressSlider: UISlider!
+    
+    
     @IBOutlet weak var trackNameLabel: UILabel!
     @IBOutlet weak var trackDescriptionLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
@@ -33,7 +35,6 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
 
         
         // Configure the popup view
-        
         
     }
     
@@ -68,7 +69,7 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
     
     // MARK: Music Player Delegate
     
-    func didStartPlayingNewTrack(withName:String, description:String, image:UIImage) {
+    func didStartPlayingNewTrack(withName:String, description:String, image:UIImage, duration:Float) {
         
         // TODO: This is where I need to initialize or update the popupItem
         self.popupBar.barStyle = LNPopupBarStyle.compact
@@ -78,6 +79,7 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
         self.popupItem.title = withName
         self.popupItem.subtitle = description
         self.popupItem.progress = 0.34
+
         //self.popupItem.rightBarButtonItems = [UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.camera, target: MusicPlayer.shared, action: #selector(MusicPlayer.togglePlayOrPause))]
         
         
@@ -102,10 +104,15 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
         self.trackImage.layer.masksToBounds = true
         self.imageTitleLabel.text = withName
         
+        // Set the max value of the slider to the number of seconds in the track
+        self.trackProgressSlider.maximumValue = duration
+        
     }
     
     func didUpdateProgress(withFloat:Float) {
         self.trackProgressBar.progress = withFloat
+        self.trackProgressSlider.value = withFloat
+        self.popupItem.progress = (withFloat/self.trackProgressSlider.maximumValue)
     }
     
     func didPausePlayer(){
@@ -123,6 +130,17 @@ class MusicPlayerViewController: UIViewController, MusicPlayerDelegate {
         self.playButton.setImage(#imageLiteral(resourceName: "Pause-Button-White"), for: .normal)
         // Set the popupitem's right bbi to the correct play/pause image
         self.popupItem.rightBarButtonItems = [UIBarButtonItem.init(image: #imageLiteral(resourceName: "Pause-Button-White-BBI"), style: .plain, target: MusicPlayer.shared, action: #selector(MusicPlayer.togglePlayOrPause))]
+    }
+    
+    @IBAction func didSlideSlider(_ sender: Any) {
+        // Value changed
+        
+    }
+    
+    @IBAction func didMoveSlider(_ sender: Any) {
+        // Touch Up Inside
+        
+        MusicPlayer.shared.seekToTime(withFloat:trackProgressSlider.value)
     }
 
 }

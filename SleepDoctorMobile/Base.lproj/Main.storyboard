@@ -122,7 +122,7 @@
                                     <segue destination="SK6-QT-dCq" kind="show" id="m7G-nP-BN2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionnaire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-8u-lTB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnosis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-8u-lTB">
                                 <rect key="frame" x="58" y="249" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100.5" id="We5-RB-BSk"/>
@@ -263,9 +263,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpR-3h-UAr">
+                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lpR-3h-UAr">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yoga Nidra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFf-fL-uRv">
                                                     <rect key="frame" x="62" y="31" width="251" height="26"/>
@@ -296,15 +295,31 @@
                                                     <color key="tintColor" white="1" alpha="0.85409628378378377" colorSpace="calibratedWhite"/>
                                                     <state key="normal" image="Play-Button-White"/>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:53" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SG-po-0N2">
+                                                    <rect key="frame" x="292" y="50" width="71" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="A1Q-KK-raJ"/>
+                                                        <constraint firstAttribute="width" constant="71" id="Cee-Uf-j3v"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="5SG-po-0N2" firstAttribute="centerY" secondItem="lpR-3h-UAr" secondAttribute="centerY" id="6Yn-1w-zlV"/>
+                                                <constraint firstItem="lpR-3h-UAr" firstAttribute="leading" secondItem="USg-n2-URW" secondAttribute="leadingMargin" constant="-8" id="6xT-0e-wyv"/>
                                                 <constraint firstItem="L0c-WZ-8fy" firstAttribute="centerY" secondItem="USg-n2-URW" secondAttribute="centerY" id="Ahr-Ye-5wl"/>
                                                 <constraint firstItem="KTa-B8-ECh" firstAttribute="top" secondItem="hFf-fL-uRv" secondAttribute="bottom" constant="-1" id="MQY-OW-Usk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="L0c-WZ-8fy" secondAttribute="trailing" constant="313" id="T0p-VT-Tqw"/>
                                                 <constraint firstItem="hFf-fL-uRv" firstAttribute="centerX" secondItem="USg-n2-URW" secondAttribute="centerX" id="d3j-Wc-DqB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lpR-3h-UAr" secondAttribute="trailing" constant="-8" id="gqY-iF-0xR"/>
+                                                <constraint firstItem="lpR-3h-UAr" firstAttribute="top" secondItem="USg-n2-URW" secondAttribute="topMargin" constant="-8" id="hE2-YY-qPM"/>
                                                 <constraint firstItem="KTa-B8-ECh" firstAttribute="centerX" secondItem="hFf-fL-uRv" secondAttribute="centerX" id="hGl-84-qhI"/>
                                                 <constraint firstItem="L0c-WZ-8fy" firstAttribute="top" secondItem="hFf-fL-uRv" secondAttribute="bottom" constant="-17" id="nYL-Xi-uog"/>
+                                                <constraint firstItem="5SG-po-0N2" firstAttribute="leading" secondItem="lpR-3h-UAr" secondAttribute="trailing" constant="-83" id="onw-94-GoX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lpR-3h-UAr" secondAttribute="bottom" constant="-8" id="znG-DE-Deq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1043,7 +1058,7 @@
             </objects>
             <point key="canvasLocation" x="-527" y="1030"/>
         </scene>
-        <!--Sleep Log-->
+        <!--Sleep Diary-->
         <scene sceneID="ikL-12-1Ev">
             <objects>
                 <viewController id="SK6-QT-dCq" customClass="SleepDiaryVC" customModule="SleepDoctorMobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -1055,209 +1070,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iDg-vQ-62O">
-                                <rect key="frame" x="16" y="98" width="63" height="407"/>
-                                <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-Zp-Wrl">
-                                        <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="8PS-0p-6EZ"/>
-                                            <constraint firstAttribute="width" constant="63" id="hLa-ej-75m"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 1">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="ycd-wT-ayz"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itz-Fe-YWD">
-                                        <rect key="frame" x="0.0" y="29" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="7ZX-6D-Tc0"/>
-                                            <constraint firstAttribute="height" constant="30" id="u3Q-ZI-PEp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 2">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="RFE-g4-FhB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuC-mS-6Hw">
-                                        <rect key="frame" x="0.0" y="58" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="2Bh-li-wDI"/>
-                                            <constraint firstAttribute="height" constant="30" id="muT-91-tGu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 3">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="JiP-vl-cT3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXq-Ud-Vqv">
-                                        <rect key="frame" x="0.0" y="87" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="0eL-ho-Yho"/>
-                                            <constraint firstAttribute="width" constant="63" id="REi-dO-duB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 4">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="otO-2m-BgM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tet-Ce-KmC">
-                                        <rect key="frame" x="0.0" y="116" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="IK3-5r-Vb9"/>
-                                            <constraint firstAttribute="height" constant="30" id="Zlu-qQ-n1o"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 5">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="kTk-dO-M3d"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHa-S7-dVb">
-                                        <rect key="frame" x="0.0" y="145" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="V7d-dz-Awa"/>
-                                            <constraint firstAttribute="height" constant="30" id="fRD-ai-WCG"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 6">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="7js-FC-rJn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-3n-mau">
-                                        <rect key="frame" x="0.0" y="174" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="gVY-PJ-FYj"/>
-                                            <constraint firstAttribute="height" constant="30" id="lRH-H8-Q3f"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 7">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="EMd-qh-HNc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCc-l1-rpy">
-                                        <rect key="frame" x="0.0" y="203" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="5DW-P5-Rfm"/>
-                                            <constraint firstAttribute="width" constant="63" id="e07-Sw-ddN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 8">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="IVU-Bv-6n8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viC-pe-MHd">
-                                        <rect key="frame" x="0.0" y="232" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="2KD-10-3VG"/>
-                                            <constraint firstAttribute="height" constant="30" id="oyG-0M-qqg"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 9">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="bU3-Q2-Pfm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzW-0v-oOd">
-                                        <rect key="frame" x="0.0" y="261" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Vbv-lM-FAJ"/>
-                                            <constraint firstAttribute="width" constant="63" id="fCD-Xx-PRh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 10">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="y7r-BK-wyZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbT-Ug-YHV">
-                                        <rect key="frame" x="0.0" y="290" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="ZWI-ro-MBM"/>
-                                            <constraint firstAttribute="width" constant="63" id="r0k-r0-STS"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 11">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="rCs-BJ-BtY"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-a3-aUN">
-                                        <rect key="frame" x="0.0" y="319" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="J3Q-5j-XkN"/>
-                                            <constraint firstAttribute="height" constant="30" id="ZUq-ng-zCC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 12">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="jPu-7l-GGk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWC-1T-hOM">
-                                        <rect key="frame" x="0.0" y="348" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="lkf-0k-h5J"/>
-                                            <constraint firstAttribute="height" constant="30" id="rlZ-2P-Lu6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 13">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="AI1-Jk-KlS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD2-rQ-is0">
-                                        <rect key="frame" x="0.0" y="377" width="63" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="7R7-KB-PXK"/>
-                                            <constraint firstAttribute="width" constant="63" id="ilH-8D-Vcs"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Night 14">
-                                            <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="jrk-EF-GgT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWO-3Z-BsX">
-                                <rect key="frame" x="79" y="75" width="37" height="21"/>
+                                <rect key="frame" x="24" y="300" width="37" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="bbr-dq-81n"/>
                                     <constraint firstAttribute="height" constant="21" id="cDd-Uw-hrW"/>
@@ -1267,7 +1081,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwi-T3-ydj">
-                                <rect key="frame" x="202.5" y="75" width="35" height="21"/>
+                                <rect key="frame" x="168.5" y="300" width="35" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="TBm-fm-yWd"/>
                                     <constraint firstAttribute="width" constant="35" id="vLY-xO-dYh"/>
@@ -1277,7 +1091,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdd-OT-RjA">
-                                <rect key="frame" x="326" y="75" width="37" height="21"/>
+                                <rect key="frame" x="321" y="300" width="37" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="FVb-yL-Joh"/>
                                     <constraint firstAttribute="width" constant="37" id="PLe-gM-WSW"/>
@@ -1286,144 +1100,108 @@
                                 <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Went to sleep at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60K-cH-kg9">
-                                <rect key="frame" x="22" y="579.5" width="115.5" height="20.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0s2-J3-sIX">
-                                <rect key="frame" x="150" y="543" width="158" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="KD7-av-Nh0"/>
-                                    <constraint firstAttribute="height" constant="41" id="fbe-lN-MMf"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="514499132.51191598">
-                                    <!--2017-04-21 20:25:32 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woke up at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVK-5R-tPW">
-                                <rect key="frame" x="188" y="579.5" width="81" height="20.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-A0-dfb">
-                                <rect key="frame" x="87" y="98" width="269" height="407"/>
+                                <rect key="frame" x="18" y="321" width="340" height="261"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ER6-kJ-hKa">
-                                        <rect key="frame" x="8" y="8" width="253" height="392"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ER6-kJ-hKa">
+                                        <rect key="frame" x="8" y="8" width="324" height="244"/>
                                         <subviews>
                                             <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyT-Bl-jvo">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="44H-fa-f1N"/>
-                                                    <constraint firstAttribute="width" constant="253" id="UdP-wZ-3KC"/>
+                                                    <constraint firstAttribute="height" constant="10" id="44H-fa-f1N"/>
                                                 </constraints>
                                             </view>
                                             <view tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZM-rs-0hL">
-                                                <rect key="frame" x="0.0" y="29" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="18" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="Iw5-Ro-Ped"/>
-                                                    <constraint firstAttribute="width" constant="253" id="q96-rw-XGn"/>
+                                                    <constraint firstAttribute="height" constant="10" id="Iw5-Ro-Ped"/>
                                                 </constraints>
                                             </view>
                                             <view tag="103" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uE0-FE-n15">
-                                                <rect key="frame" x="0.0" y="58" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="36" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="F4o-Ix-Q1h"/>
-                                                    <constraint firstAttribute="width" constant="253" id="IwU-qB-vt5"/>
+                                                    <constraint firstAttribute="height" constant="10" id="F4o-Ix-Q1h"/>
                                                 </constraints>
                                             </view>
                                             <view tag="104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-CD-aUz">
-                                                <rect key="frame" x="0.0" y="87" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="54" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="IJn-7H-dqe"/>
-                                                    <constraint firstAttribute="height" constant="15" id="Xmb-LB-3Qm"/>
+                                                    <constraint firstAttribute="height" constant="10" id="Xmb-LB-3Qm"/>
                                                 </constraints>
                                             </view>
                                             <view tag="105" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgd-wE-KvG">
-                                                <rect key="frame" x="0.0" y="116" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="72" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="7bX-Io-Chy"/>
-                                                    <constraint firstAttribute="height" constant="15" id="MBg-OF-3Il"/>
+                                                    <constraint firstAttribute="height" constant="10" id="MBg-OF-3Il"/>
                                                 </constraints>
                                             </view>
                                             <view tag="106" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-zp-8z1">
-                                                <rect key="frame" x="0.0" y="145" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="90" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="Jqi-Bb-aZo"/>
-                                                    <constraint firstAttribute="height" constant="15" id="Rz1-6M-D5V"/>
+                                                    <constraint firstAttribute="height" constant="10" id="Rz1-6M-D5V"/>
                                                 </constraints>
                                             </view>
                                             <view tag="107" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2B-0T-VPs">
-                                                <rect key="frame" x="0.0" y="174" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="108" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="L4S-gD-ryE"/>
-                                                    <constraint firstAttribute="width" constant="253" id="i93-Rw-vdt"/>
+                                                    <constraint firstAttribute="height" constant="10" id="L4S-gD-ryE"/>
                                                 </constraints>
                                             </view>
                                             <view tag="108" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWv-mR-4Tr">
-                                                <rect key="frame" x="0.0" y="203" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="126" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="EUv-h3-RCX"/>
-                                                    <constraint firstAttribute="height" constant="15" id="eRu-br-CzJ"/>
+                                                    <constraint firstAttribute="height" constant="10" id="eRu-br-CzJ"/>
                                                 </constraints>
                                             </view>
                                             <view tag="109" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEf-cf-ReV">
-                                                <rect key="frame" x="0.0" y="232" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="144" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="CIz-2h-ftD"/>
-                                                    <constraint firstAttribute="width" constant="253" id="cbe-wN-7uf"/>
+                                                    <constraint firstAttribute="height" constant="10" id="CIz-2h-ftD"/>
                                                 </constraints>
                                             </view>
                                             <view tag="110" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhv-wZ-qpT">
-                                                <rect key="frame" x="0.0" y="261" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="162" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="oEj-IF-Q8M"/>
-                                                    <constraint firstAttribute="height" constant="15" id="trE-Qw-9oy"/>
+                                                    <constraint firstAttribute="height" constant="10" id="trE-Qw-9oy"/>
                                                 </constraints>
                                             </view>
                                             <view tag="111" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zl-Fq-5j0">
-                                                <rect key="frame" x="0.0" y="290" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="180" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="l7Z-wg-def"/>
-                                                    <constraint firstAttribute="height" constant="15" id="v8F-WZ-gy0"/>
+                                                    <constraint firstAttribute="height" constant="10" id="v8F-WZ-gy0"/>
                                                 </constraints>
                                             </view>
                                             <view tag="112" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37F-cd-KFQ">
-                                                <rect key="frame" x="0.0" y="319" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="198" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="131-a8-7am"/>
-                                                    <constraint firstAttribute="width" constant="253" id="5Lk-lL-CPd"/>
+                                                    <constraint firstAttribute="height" constant="10" id="131-a8-7am"/>
                                                 </constraints>
                                             </view>
                                             <view tag="113" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5b-iN-qKq">
-                                                <rect key="frame" x="0.0" y="348" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="216" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="Uef-m0-YG9"/>
-                                                    <constraint firstAttribute="height" constant="15" id="e0k-qy-RDh"/>
+                                                    <constraint firstAttribute="height" constant="10" id="e0k-qy-RDh"/>
                                                 </constraints>
                                             </view>
                                             <view tag="114" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOl-1Q-yqn">
-                                                <rect key="frame" x="0.0" y="377" width="253" height="15"/>
+                                                <rect key="frame" x="0.0" y="234" width="324" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="253" id="J4T-o5-P50"/>
-                                                    <constraint firstAttribute="height" constant="15" id="ktt-30-ojF"/>
+                                                    <constraint firstAttribute="height" constant="10" id="ktt-30-ojF"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1431,9 +1209,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="ER6-kJ-hKa" firstAttribute="centerY" secondItem="eJ1-A0-dfb" secondAttribute="centerY" id="8km-ER-eNK"/>
                                     <constraint firstItem="ER6-kJ-hKa" firstAttribute="top" secondItem="eJ1-A0-dfb" secondAttribute="top" constant="8" id="EyI-Ix-JZk"/>
-                                    <constraint firstAttribute="bottom" secondItem="ER6-kJ-hKa" secondAttribute="bottom" constant="7" id="QY3-Eh-QwA"/>
+                                    <constraint firstAttribute="bottom" secondItem="ER6-kJ-hKa" secondAttribute="bottom" constant="9" id="QY3-Eh-QwA"/>
                                     <constraint firstAttribute="trailing" secondItem="ER6-kJ-hKa" secondAttribute="trailing" constant="8" id="U2O-uA-1BW"/>
                                     <constraint firstItem="ER6-kJ-hKa" firstAttribute="leading" secondItem="eJ1-A0-dfb" secondAttribute="leading" constant="8" id="ePb-75-j3w"/>
                                     <constraint firstItem="ER6-kJ-hKa" firstAttribute="centerX" secondItem="eJ1-A0-dfb" secondAttribute="centerX" id="eqM-CJ-kEj"/>
@@ -1453,60 +1230,269 @@
                                     <action selector="tappedBeginSleepDiary:" destination="SK6-QT-dCq" eventType="touchUpInside" id="SX6-jU-7rG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmS-XN-WAi">
-                                <rect key="frame" x="329" y="561.5" width="41" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YfS-Px-1wV">
+                                <rect key="frame" x="9.5" y="124" width="356" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-Zp-Wrl">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Rar-Pw-EUt"/>
+                                            <constraint firstAttribute="width" constant="50" id="rMP-iG-aI6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="ycd-wT-ayz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itz-Fe-YWD">
+                                        <rect key="frame" x="51" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="E79-BL-wh0"/>
+                                            <constraint firstAttribute="width" constant="50" id="xOM-3R-qX4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="RFE-g4-FhB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuC-mS-6Hw">
+                                        <rect key="frame" x="102" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7NS-hG-IgO"/>
+                                            <constraint firstAttribute="width" constant="50" id="uOE-ml-xPb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="JiP-vl-cT3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXq-Ud-Vqv">
+                                        <rect key="frame" x="153" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="I8X-CN-fob"/>
+                                            <constraint firstAttribute="width" constant="50" id="QWe-WJ-Tu2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="otO-2m-BgM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tet-Ce-KmC">
+                                        <rect key="frame" x="204" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="RV3-mq-a3R"/>
+                                            <constraint firstAttribute="height" constant="50" id="zf0-fC-aPs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="kTk-dO-M3d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHa-S7-dVb">
+                                        <rect key="frame" x="255" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="LzP-du-PWL"/>
+                                            <constraint firstAttribute="height" constant="50" id="dqj-ZM-via"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="7js-FC-rJn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-3n-mau">
+                                        <rect key="frame" x="306" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fb8-Rh-n3x"/>
+                                            <constraint firstAttribute="width" constant="50" id="htd-tr-Z5r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="EMd-qh-HNc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0ZF-Rb-vdd">
+                                <rect key="frame" x="9" y="176" width="356" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCc-l1-rpy">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kQd-vg-EWr"/>
+                                            <constraint firstAttribute="width" constant="50" id="wXe-Ug-5bR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="IVU-Bv-6n8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viC-pe-MHd">
+                                        <rect key="frame" x="51" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="0GM-qN-wkJ"/>
+                                            <constraint firstAttribute="height" constant="50" id="g5F-hU-HMA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="bU3-Q2-Pfm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzW-0v-oOd">
+                                        <rect key="frame" x="102" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="YLC-U2-IV3"/>
+                                            <constraint firstAttribute="height" constant="50" id="eii-Ea-KS5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="y7r-BK-wyZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbT-Ug-YHV">
+                                        <rect key="frame" x="153" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4G8-d2-iwq"/>
+                                            <constraint firstAttribute="width" constant="50" id="dP3-Pt-Pu9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="11">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="rCs-BJ-BtY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-a3-aUN">
+                                        <rect key="frame" x="204" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="RSc-sU-aV8"/>
+                                            <constraint firstAttribute="height" constant="50" id="oOx-fp-hXq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="12">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="jPu-7l-GGk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWC-1T-hOM">
+                                        <rect key="frame" x="255" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fBC-4z-kHM"/>
+                                            <constraint firstAttribute="width" constant="50" id="y7M-re-XZC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="13">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="AI1-Jk-KlS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD2-rQ-is0">
+                                        <rect key="frame" x="306" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="EMf-78-d0C"/>
+                                            <constraint firstAttribute="width" constant="50" id="Z8K-Et-uit"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                        <state key="normal" title="14">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNightButton:" destination="SK6-QT-dCq" eventType="touchUpInside" id="jrk-EF-GgT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJa-IH-CqU">
+                                <rect key="frame" x="101.5" y="260" width="170" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="41" id="3Zi-HS-ryn"/>
-                                    <constraint firstAttribute="height" constant="30" id="RTg-EE-rX3"/>
+                                    <constraint firstAttribute="width" constant="170" id="xhZ-uA-Aej"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Edit">
-                                    <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9UG-y7-kD2" kind="show" identifier="pushDiaryEntry" id="D6E-bz-9Xs"/>
-                                </connections>
-                            </button>
-                            <datePicker userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UUW-mM-FVb">
-                                <rect key="frame" x="0.0" y="543" width="158" height="41"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkr-Yp-XfU">
+                                <rect key="frame" x="102.5" y="77" width="170" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="1Nr-I6-STw"/>
-                                    <constraint firstAttribute="height" constant="41" id="Kp0-LT-CjH"/>
+                                    <constraint firstAttribute="width" constant="170" id="Tz1-d7-6It"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="514499132.51191598">
-                                    <!--2017-04-21 20:25:32 +0000-->
-                                </date>
-                            </datePicker>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="eJ1-A0-dfb" secondAttribute="trailing" constant="3" id="5Ce-fX-KMD"/>
-                            <constraint firstItem="DVK-5R-tPW" firstAttribute="leading" secondItem="60K-cH-kg9" secondAttribute="trailing" constant="50.5" id="66f-sY-opP"/>
-                            <constraint firstItem="60K-cH-kg9" firstAttribute="leading" secondItem="j2n-jW-cNd" secondAttribute="leadingMargin" constant="6" id="Aku-7z-Kd4"/>
-                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="top" secondItem="Vdd-OT-RjA" secondAttribute="bottom" constant="2" id="B09-4v-xdI"/>
-                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="centerY" secondItem="iDg-vQ-62O" secondAttribute="centerY" id="E2Q-YW-79d"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="iDg-vQ-62O" secondAttribute="leading" id="HIh-jt-EmI"/>
-                            <constraint firstItem="iDg-vQ-62O" firstAttribute="top" secondItem="DWO-3Z-BsX" secondAttribute="bottom" constant="2" id="KGr-a8-9l2"/>
-                            <constraint firstItem="0s2-J3-sIX" firstAttribute="centerY" secondItem="UUW-mM-FVb" secondAttribute="centerY" id="QTf-hP-HMh"/>
-                            <constraint firstItem="UUW-mM-FVb" firstAttribute="centerX" secondItem="60K-cH-kg9" secondAttribute="centerX" id="Rdm-A6-oVf"/>
-                            <constraint firstItem="qoe-Hz-E2U" firstAttribute="top" secondItem="60K-cH-kg9" secondAttribute="bottom" constant="12" id="RuB-kq-DnV"/>
-                            <constraint firstItem="DVK-5R-tPW" firstAttribute="centerY" secondItem="60K-cH-kg9" secondAttribute="centerY" id="Val-ha-r7t"/>
-                            <constraint firstItem="DWO-3Z-BsX" firstAttribute="leading" secondItem="eJ1-A0-dfb" secondAttribute="leading" constant="-8" id="ZDD-wm-WrR"/>
-                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="height" secondItem="iDg-vQ-62O" secondAttribute="height" id="gGk-Sd-T9d"/>
-                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="leading" secondItem="iDg-vQ-62O" secondAttribute="trailing" constant="8" id="htQ-vw-jy7"/>
-                            <constraint firstItem="mwi-T3-ydj" firstAttribute="centerX" secondItem="eJ1-A0-dfb" secondAttribute="centerX" constant="-1.5" id="ikR-3B-UqK"/>
-                            <constraint firstItem="qoe-Hz-E2U" firstAttribute="centerX" secondItem="j2n-jW-cNd" secondAttribute="centerX" id="jFX-Rz-V7r"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HmS-XN-WAi" secondAttribute="trailing" constant="-11" id="ovW-ud-iWC"/>
-                            <constraint firstItem="kWl-dk-YZn" firstAttribute="top" secondItem="qoe-Hz-E2U" secondAttribute="bottom" constant="18" id="rSp-ZN-i3N"/>
-                            <constraint firstItem="DVK-5R-tPW" firstAttribute="top" secondItem="HmS-XN-WAi" secondAttribute="bottom" constant="-12" id="vOu-cf-fjt"/>
-                            <constraint firstItem="60K-cH-kg9" firstAttribute="top" secondItem="UUW-mM-FVb" secondAttribute="bottom" constant="-4.5" id="x4E-cE-kTB"/>
-                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="top" secondItem="mwi-T3-ydj" secondAttribute="bottom" constant="2" id="x6f-JM-Jd2"/>
-                            <constraint firstItem="Vdd-OT-RjA" firstAttribute="trailing" secondItem="eJ1-A0-dfb" secondAttribute="trailing" constant="7" id="xta-KR-MDh"/>
-                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="top" secondItem="4Ty-ql-NuS" secondAttribute="bottom" constant="34" id="y5K-Rg-wDJ"/>
-                            <constraint firstItem="0s2-J3-sIX" firstAttribute="centerX" secondItem="DVK-5R-tPW" secondAttribute="centerX" id="yd7-7x-9qO"/>
+                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="top" secondItem="DWO-3Z-BsX" secondAttribute="bottom" id="3OO-iE-AKP"/>
+                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="top" secondItem="Vdd-OT-RjA" secondAttribute="bottom" id="5DV-g8-hsT"/>
+                            <constraint firstItem="gkr-Yp-XfU" firstAttribute="centerX" secondItem="YfS-Px-1wV" secondAttribute="centerX" id="6h8-Wv-uhK"/>
+                            <constraint firstItem="qoe-Hz-E2U" firstAttribute="centerX" secondItem="j2n-jW-cNd" secondAttribute="centerX" id="B5X-BA-azz"/>
+                            <constraint firstItem="kWl-dk-YZn" firstAttribute="top" secondItem="qoe-Hz-E2U" secondAttribute="bottom" constant="18" id="GoD-Ru-KY4"/>
+                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="top" secondItem="mwi-T3-ydj" secondAttribute="bottom" id="NJ4-mY-KsJ"/>
+                            <constraint firstItem="mwi-T3-ydj" firstAttribute="centerX" secondItem="eJ1-A0-dfb" secondAttribute="centerX" constant="-2" id="Oea-PR-vKg"/>
+                            <constraint firstItem="qoe-Hz-E2U" firstAttribute="top" secondItem="eJ1-A0-dfb" secondAttribute="bottom" constant="30" id="VHk-fy-sWS"/>
+                            <constraint firstItem="YfS-Px-1wV" firstAttribute="top" secondItem="4Ty-ql-NuS" secondAttribute="bottom" constant="60" id="WcP-3d-mWC"/>
+                            <constraint firstItem="mwi-T3-ydj" firstAttribute="top" secondItem="xJa-IH-CqU" secondAttribute="bottom" constant="8" id="d2z-lu-bId"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eJ1-A0-dfb" secondAttribute="trailing" constant="1" id="eYm-4v-npN"/>
+                            <constraint firstItem="xJa-IH-CqU" firstAttribute="centerX" secondItem="mwi-T3-ydj" secondAttribute="centerX" id="gz7-Op-hJG"/>
+                            <constraint firstItem="0ZF-Rb-vdd" firstAttribute="centerX" secondItem="YfS-Px-1wV" secondAttribute="centerX" id="hqV-Dy-TGf"/>
+                            <constraint firstItem="eJ1-A0-dfb" firstAttribute="leading" secondItem="DWO-3Z-BsX" secondAttribute="trailing" constant="-43" id="mQV-qj-jAY"/>
+                            <constraint firstItem="YfS-Px-1wV" firstAttribute="centerX" secondItem="j2n-jW-cNd" secondAttribute="centerX" id="tL0-uz-YPE"/>
+                            <constraint firstItem="0ZF-Rb-vdd" firstAttribute="top" secondItem="YfS-Px-1wV" secondAttribute="bottom" constant="2" id="uc6-dP-a1G"/>
+                            <constraint firstItem="Vdd-OT-RjA" firstAttribute="leading" secondItem="eJ1-A0-dfb" secondAttribute="trailing" constant="-37" id="ulp-We-6Qk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eJ1-A0-dfb" secondAttribute="leading" constant="-2" id="wFl-Al-Aib"/>
+                            <constraint firstItem="YfS-Px-1wV" firstAttribute="top" secondItem="gkr-Yp-XfU" secondAttribute="bottom" constant="15" id="zcm-bb-C8D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sleep Log" id="i0S-01-F3x">
+                    <navigationItem key="navigationItem" title="Sleep Diary" id="i0S-01-F3x">
                         <barButtonItem key="backBarButtonItem" title="           " id="fGj-ru-pOY"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -1526,7 +1512,6 @@
                         <outlet property="bar8" destination="tWv-mR-4Tr" id="Ifk-px-HzE"/>
                         <outlet property="bar9" destination="CEf-cf-ReV" id="Utc-4s-qIw"/>
                         <outlet property="beginDiaryButton" destination="qoe-Hz-E2U" id="8FL-tf-kM8"/>
-                        <outlet property="editButton" destination="HmS-XN-WAi" id="irZ-3s-1Vx"/>
                         <outlet property="graphBackgroundView" destination="eJ1-A0-dfb" id="nP7-WN-WA0"/>
                         <outlet property="night10Button" destination="EzW-0v-oOd" id="cY7-H6-5m3"/>
                         <outlet property="night11Button" destination="PbT-Ug-YHV" id="Lrt-AS-iqs"/>
@@ -1542,15 +1527,14 @@
                         <outlet property="night7Button" destination="Duk-3n-mau" id="0hB-6B-uwz"/>
                         <outlet property="night8Button" destination="LCc-l1-rpy" id="4Zk-33-Igq"/>
                         <outlet property="night9Button" destination="viC-pe-MHd" id="hQr-iZ-Mo5"/>
-                        <outlet property="sleepTimePicker" destination="UUW-mM-FVb" id="Erg-DB-nZw"/>
-                        <outlet property="wakeTimePicker" destination="0s2-J3-sIX" id="OIo-er-8GT"/>
+                        <segue destination="9UG-y7-kD2" kind="show" identifier="pushDiaryEntry" id="weD-WS-mW4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I78-bT-ytI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288.80000000000001" y="1029.5352323838081"/>
         </scene>
-        <!--Questionnaire-->
+        <!--Diagnose Sleep Disorders-->
         <scene sceneID="qoT-AJ-hr3">
             <objects>
                 <viewController id="3QE-kO-l1f" customClass="QuestionnaireIntroVC" customModule="SleepDoctorMobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -1667,7 +1651,7 @@
                             <constraint firstItem="2Jo-Zs-D61" firstAttribute="centerX" secondItem="R4F-46-NoL" secondAttribute="centerX" id="ygO-qD-Lix"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Questionnaire" id="kdL-oj-BBX">
+                    <navigationItem key="navigationItem" title="Diagnose Sleep Disorders" id="kdL-oj-BBX">
                         <barButtonItem key="backBarButtonItem" title="           " id="9A2-Py-aYP"/>
                     </navigationItem>
                     <connections>

@@ -18,6 +18,7 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         * Tag 5 = Result Color View
     */
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var resultsTableView: UITableView!
     @IBOutlet weak var sleepHygieneButton: UIButton!
     @IBOutlet weak var daytimeSleepinessScoreLabel: UILabel!
@@ -67,6 +68,10 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let sleepinessScoreString = String(QuestionnaireAnalyzer().getDaytimeSleepinessScore())
         daytimeSleepinessScoreLabel.text = "\(sleepinessScoreString)"
+        
+        let defaults = UserDefaults.standard
+        let name = defaults.object(forKey: userNameKey) as! String
+        titleLabel.text = "Here are your results, \(name)"
     }
     
     override func viewWillAppear(_ animated: Bool) {

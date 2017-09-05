@@ -8,11 +8,13 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 protocol MusicPlayerDelegate {
     func didStartPlayingNewTrack(withName:String,
                                  description:String,
-                                 image:UIImage)
+                                 image:UIImage,
+                                 duration:Float)
     func didUpdateProgress(withFloat:Float)
     func didPausePlayer()
     func didPlayPlayer()
@@ -31,6 +33,28 @@ class MusicPlayer: AVQueuePlayer {
     
     var progressTimer:Timer? = nil
     let progress:Float = 0.0
+    
+    
+    private override init() {
+        
+        super.init()
+        
+        do  {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch {
+            print("ERROR INITIALIZING THE AVAUDIOSESSION")
+        }
+        
+        // Set up background controls
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+        let commandCenter = MPRemoteCommandCenter.shared()
+        commandCenter.playCommand.isEnabled = true
+        //commandCenter.nextTrackCommand.addTarget(self, action:#selector(nextTrackCommandSelector))
+        commandCenter.pauseCommand.isEnabled = true
+        commandCenter.playCommand.addTarget(self, action: #selector(MusicPlayer.togglePlayOrPause))
+        commandCenter.pauseCommand.addTarget(self, action: #selector(MusicPlayer.togglePlayOrPause))
+    }
+    
     
     func setPlayerVolume(toValue:Float) {
         self.volume = toValue
@@ -109,7 +133,17 @@ class MusicPlayer: AVQueuePlayer {
                     self.insert(playerItem, after: nil)
                     self.play()
                     
-                    delegate?.didStartPlayingNewTrack(withName: withName, description: description, image:image)
+                    // Set the MP Track Info (for lock screen controls)                    
+                    let artwork = MPMediaItemArtwork.init(boundsSize: image.size, requestHandler: { (size) -> UIImage in
+                        return image
+                    })
+                    MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyArtwork:artwork,
+                                                                       MPMediaItemPropertyTitle:withName,
+                                                                       MPMediaItemPropertyArtist:"Sleep Doctor Mobile",
+                                                                       MPMediaItemPropertyPlaybackDuration:CMTimeGetSeconds((self.currentItem?.asset.duration)!)]
+                    
+                    // Alert the delegate that the track started playing
+                    delegate?.didStartPlayingNewTrack(withName: withName, description: description, image:image, duration:Float(CMTimeGetSeconds((self.currentItem?.asset.duration)!)))
                     
                     startUpdatingProgress()
                 }
@@ -136,8 +170,17 @@ class MusicPlayer: AVQueuePlayer {
                     self.insert(playerItem, after: nil)
                     self.play()
                     
+                    // Set the MP Track Info (for lock screen controls)
+                    let artwork = MPMediaItemArtwork.init(boundsSize: image.size, requestHandler: { (size) -> UIImage in
+                        return image
+                    })
+                    MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyArtwork:artwork,
+                                                                       MPMediaItemPropertyTitle:withName,
+                                                                       MPMediaItemPropertyArtist:"Sleep Doctor Mobile",
+                                                                       MPMediaItemPropertyPlaybackDuration:CMTimeGetSeconds((self.currentItem?.asset.duration)!)]
+                    
                     // Tell the delegate what song has started
-                    MusicPlayerViewController.shared.didStartPlayingNewTrack(withName: withName, description: description, image:image)
+                    MusicPlayerViewController.shared.didStartPlayingNewTrack(withName: withName, description: description, image:image, duration: Float(CMTimeGetSeconds((self.currentItem?.asset.duration)!)))
                     
                     startUpdatingProgress()
                 }
@@ -160,6 +203,13 @@ class MusicPlayer: AVQueuePlayer {
         }
     }
     
+    func seekToTime(withFloat:Float) {
+        print("HERE BE UR FLOAT U SCALLYWAG", withFloat)        
+        let intTime = Int64(withFloat)
+        let seekTime = CMTimeMake(intTime, 1)
+        self.seek(to: seekTime)
+    }
+    
     func updateProgressValue() {
         print("Fired progress value")
         if let duration = self.currentItem?.asset.duration {
@@ -167,7 +217,7 @@ class MusicPlayer: AVQueuePlayer {
         let currentSeconds = CMTimeGetSeconds(self.currentTime())
         let ratio = currentSeconds/durationSeconds
         
-        delegate?.didUpdateProgress(withFloat: Float(ratio))
+        delegate?.didUpdateProgress(withFloat: Float(Float(currentSeconds)))
         } else {
             // There is likely no current item. Stop the timer from running.
             stopUpdatingProgress()
