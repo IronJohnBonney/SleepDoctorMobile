@@ -53,6 +53,9 @@ class MusicPlayer: AVQueuePlayer {
         commandCenter.pauseCommand.isEnabled = true
         commandCenter.playCommand.addTarget(self, action: #selector(MusicPlayer.togglePlayOrPause))
         commandCenter.pauseCommand.addTarget(self, action: #selector(MusicPlayer.togglePlayOrPause))
+        
+        // Configure the player to not pause upon loading
+        self.automaticallyWaitsToMinimizeStalling = false
     }
     
     

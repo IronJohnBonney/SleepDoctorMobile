@@ -299,8 +299,6 @@ class DisorderDetailVC: UIViewController {
         //contentContainerView.frame.size = flashcardScrollView.contentSize
         //self.view.frame.size.height = 5000.0
         
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

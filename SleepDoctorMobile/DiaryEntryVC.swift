@@ -54,9 +54,9 @@ class DiaryEntryVC: UIViewController {
         gotOutOfBedTimePicker.setDate(Date.init(timeInterval: Double(secondsInDay), since: diaryEntry?.gotOutOfBedTime as! Date), animated: true)
         
         
-        let sleepEfficiency = Float(wokeUpTimePicker.date.minutes(from: fellAsleepTimePicker.date)) / Float(gotOutOfBedTimePicker.date.minutes(from: gotInBedTimePicker.date))
+        let sleepEfficiency = Float(wokeUpTimePicker.date.minutes(from: fellAsleepTimePicker.date)) / Float(gotOutOfBedTimePicker.date.minutes(from: gotInBedTimePicker.date)) * 100.0
         
-        sleepEfficiencyLabel.text = String.init(format: "%.2f%", sleepEfficiency)
+        sleepEfficiencyLabel.text = "\(Int(sleepEfficiency))%"
         let hoursSlept = (diaryEntry?.minutesAsleep)!/60
         let minutesSlept = (diaryEntry?.minutesAsleep)! - (hoursSlept * 60)
         timeAsleepLabel.text = "\(hoursSlept)hr \(minutesSlept)min"

@@ -93,7 +93,17 @@ class BritishAirwaysWebView: UIViewController {
     
 }
 
+class AboutUsVC: UIViewController {
+    
+    @IBOutlet weak var websiteButton: UIButton!
+    
+    override func viewDidLoad() {
+        websiteButton.layer.cornerRadius = 8.0
+    }
+}
+
 class AboutUsWebview: UIViewController {
+    
     
     @IBOutlet weak var webView: UIWebView!
     
@@ -103,6 +113,12 @@ class AboutUsWebview: UIViewController {
         let url = URL(string: "http://ansaustin.com")
         let request = URLRequest(url: url!)
         webView.loadRequest(request)
+        
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    @IBAction func closeView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
