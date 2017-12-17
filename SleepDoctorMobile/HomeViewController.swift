@@ -98,8 +98,30 @@ class AboutUsVC: UIViewController {
     @IBOutlet weak var websiteButton: UIButton!
     
     override func viewDidLoad() {
-        websiteButton.layer.cornerRadius = 8.0
+        websiteButton.layer.cornerRadius = 10.0
     }
+    
+    @IBAction func tappedKyleNumber(_ sender: Any) {
+        let kyleNumber = "5125510846"
+        
+        let phoneCallURL = URL(string: "tel://\(kyleNumber)")
+        
+        let application:UIApplication = UIApplication.shared
+        if (application.canOpenURL(phoneCallURL!)) {
+            application.open(phoneCallURL!, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func tappedWestlakeNumber(_ sender: Any) {
+        let westlakeNumber = "5124582600"
+        let phoneCallURL = URL(string: "tel://\(westlakeNumber)")
+        
+        let application:UIApplication = UIApplication.shared
+        if (application.canOpenURL(phoneCallURL!)) {
+            application.open(phoneCallURL!, options: [:], completionHandler: nil)
+        }
+    }
+    
 }
 
 class AboutUsWebview: UIViewController {

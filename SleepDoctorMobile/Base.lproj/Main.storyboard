@@ -1117,27 +1117,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-ag-DaF">
-                                <rect key="frame" x="16" y="161" width="343" height="128"/>
+                                <rect key="frame" x="16" y="161" width="343" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Za2-My-CJU"/>
+                                    <constraint firstAttribute="height" constant="80" id="Za2-My-CJU"/>
                                 </constraints>
                                 <string key="text">Dr. Neeraj Manchanda is trained and board certified Neurology, and Sleep Medicine.  Prior to starting his practice in Kyle and Westlake, Dr. Manchanda has run a very busy outpatient and inpatient practice in Northern Michigan. Dr. Manchanda served as a Medical Director of one of the largest dementia units in Northern Michigan. He did his medical school in India with residency and fellowship trainings at UT Southwestern Austin and University of Michigan Ann Arbor.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Rani Das, MD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCN-al-WId">
-                                <rect key="frame" x="41" y="333" width="292" height="21"/>
+                                <rect key="frame" x="41" y="261" width="292" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LNG-eK-95Z"/>
                                     <constraint firstAttribute="width" constant="292" id="NX1-mE-RME"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neurology, Sleep Medicine, Nutrition, Integrative Medicine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RT-mf-ZqI">
-                                <rect key="frame" x="16" y="359" width="343" height="21"/>
+                                <rect key="frame" x="16" y="287" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="B6m-fQ-NHS"/>
                                     <constraint firstAttribute="width" constant="343" id="jBS-ZP-aFM"/>
@@ -1147,12 +1147,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FOa-EE-Bj6">
-                                <rect key="frame" x="16" y="385" width="343" height="128"/>
+                                <rect key="frame" x="16" y="315" width="343" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="u8N-QH-wPt"/>
+                                    <constraint firstAttribute="height" constant="80" id="u8N-QH-wPt"/>
                                 </constraints>
-                                <mutableString key="text">Dr. Das is Board Certified in Neurology, Sleep Medicine, and Nutrition. Dr. Das provides a holistic and comprehensive approach to the treatment of neurological problems and sleep disorders, with a special interest in Women's Health and Wellness. Dr. Das graduated from Kakatiya Medicial College in India and completed her Internal Medicine Residency at St. Joseph Mercy Hospital, Pontiac, Michigan, Wayne State University. She practiced Internal Medicine/ Sleep for several years in Michigan before returning to Neurology training. Dr. Das graduated from UT Southwestern Neurology Program at Austin in July 2012. Dr. Das evaluates and takes care of patients with Headache, Memory loss, Alzheimer's Dementia, Multiple Sclerosis, Parkinsons Disease, Stroke, Neuropathic pain/ weakness, Sleep disorders and Seizure disorders. </mutableString>
+                                <string key="text">Dr. Das is Board Certified in Neurology, Sleep Medicine, and Nutrition. Dr. Das provides a holistic and comprehensive approach to the treatment of neurological problems and sleep disorders, with a special interest in Women's Health and Wellness. Dr. Das graduated from Kakatiya Medicial College in India and completed her Internal Medicine Residency at St. Joseph Mercy Hospital, Pontiac, Michigan, Wayne State University. She practiced Internal Medicine/ Sleep for several years in Michigan before returning to Neurology training. Dr. Das graduated from UT Southwestern Neurology Program at Austin in July 2012. Dr. Das evaluates and takes care of patients with Headache, Memory loss, Alzheimer's Dementia, Multiple Sclerosis, Parkinsons Disease, Stroke, Neuropathic pain/ weakness, Sleep disorders and Seizure disorders. </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1163,30 +1163,117 @@
                                     <constraint firstAttribute="height" constant="21" id="vzV-KM-p1c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC4-nC-vOf">
+                                <rect key="frame" x="41" y="410" width="292" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="K7e-eT-QVO"/>
+                                    <constraint firstAttribute="width" constant="292" id="rqE-5P-Zns"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Westlake" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-mt-tE2">
+                                <rect key="frame" x="212" y="436" width="112" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="tdA-NH-X76"/>
+                                    <constraint firstAttribute="width" constant="112" id="yQc-QL-ZjI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kyle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6i-qf-0BG">
+                                <rect key="frame" x="55" y="436" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="0k5-fP-1Hk"/>
+                                    <constraint firstAttribute="height" constant="21" id="6TB-h0-8RL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP0-JU-fjQ">
+                                <rect key="frame" x="49" y="463" width="124" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="MTr-CA-ReU"/>
+                                    <constraint firstAttribute="width" constant="124" id="baS-XQ-iun"/>
+                                </constraints>
+                                <string key="text">1180 Seton Parkway Suite 300
+Kyle, TX 78640</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-Jy-HHL">
+                                <rect key="frame" x="206" y="463" width="124" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="ftk-X4-M6f"/>
+                                    <constraint firstAttribute="height" constant="47" id="oq8-kP-lVT"/>
+                                </constraints>
+                                <string key="text">4407 Bee Caves Road
+Building 3, Suite 301
+Austin, TX 78746</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skK-JQ-ofk">
+                                <rect key="frame" x="55" y="518" width="112" height="30"/>
+                                <state key="normal" title="(512) 551-0846 ">
+                                    <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedKyleNumber:" destination="8sm-z1-akG" eventType="touchUpInside" id="lBd-Ih-z1t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19e-Vz-ozS">
+                                <rect key="frame" x="213" y="518" width="111" height="30"/>
+                                <state key="normal" title="(512) 458-2600">
+                                    <color key="titleColor" red="0.12549019610000001" green="0.25882352939999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedWestlakeNumber:" destination="8sm-z1-akG" eventType="touchUpInside" id="hZk-xi-WOo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BYQ-Ev-grZ" firstAttribute="top" secondItem="MdA-aZ-1Wm" secondAttribute="bottom" constant="45" id="1yz-0r-Yy6"/>
+                            <constraint firstItem="skK-JQ-ofk" firstAttribute="centerX" secondItem="DP0-JU-fjQ" secondAttribute="centerX" id="3XQ-PO-Veu"/>
                             <constraint firstItem="BYQ-Ev-grZ" firstAttribute="centerX" secondItem="CJs-0t-XfZ" secondAttribute="centerX" id="3fV-Wt-AGX"/>
+                            <constraint firstItem="DP0-JU-fjQ" firstAttribute="top" secondItem="c6i-qf-0BG" secondAttribute="bottom" constant="6" id="6n6-aU-GYT"/>
                             <constraint firstItem="9RT-mf-ZqI" firstAttribute="centerX" secondItem="pCN-al-WId" secondAttribute="centerX" id="AH3-ni-qtX"/>
+                            <constraint firstItem="skK-JQ-ofk" firstAttribute="top" secondItem="DP0-JU-fjQ" secondAttribute="bottom" constant="8" id="BJ3-se-Wg4"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ygq-ag-DaF" secondAttribute="leading" id="DEA-Vb-4fa"/>
                             <constraint firstItem="5vD-4f-Yum" firstAttribute="centerX" secondItem="BYQ-Ev-grZ" secondAttribute="centerX" id="DgM-Bl-jYB"/>
+                            <constraint firstItem="DFa-Jy-HHL" firstAttribute="top" secondItem="1qF-mt-tE2" secondAttribute="bottom" constant="6" id="EMo-NI-1Rt"/>
+                            <constraint firstItem="DFa-Jy-HHL" firstAttribute="centerX" secondItem="1qF-mt-tE2" secondAttribute="centerX" id="JZa-DD-icO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FOa-EE-Bj6" secondAttribute="trailing" id="Jo3-xI-Cze"/>
                             <constraint firstItem="Ygq-ag-DaF" firstAttribute="centerX" secondItem="CJs-0t-XfZ" secondAttribute="centerX" id="LYx-aW-7Z8"/>
                             <constraint firstItem="Ygq-ag-DaF" firstAttribute="top" secondItem="5vD-4f-Yum" secondAttribute="bottom" constant="5" id="M3N-km-o0C"/>
                             <constraint firstItem="9RT-mf-ZqI" firstAttribute="top" secondItem="pCN-al-WId" secondAttribute="bottom" constant="5" id="O3u-WG-jJl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="FOa-EE-Bj6" secondAttribute="leading" id="OcP-82-B3d"/>
                             <constraint firstItem="BBb-bO-87f" firstAttribute="centerX" secondItem="CJs-0t-XfZ" secondAttribute="centerX" id="OsP-re-knF"/>
-                            <constraint firstItem="pCN-al-WId" firstAttribute="top" secondItem="Ygq-ag-DaF" secondAttribute="bottom" constant="44" id="P16-oh-FoO"/>
-                            <constraint firstItem="FOa-EE-Bj6" firstAttribute="top" secondItem="9RT-mf-ZqI" secondAttribute="bottom" constant="5" id="Sd7-64-IVT"/>
+                            <constraint firstItem="pCN-al-WId" firstAttribute="top" secondItem="Ygq-ag-DaF" secondAttribute="bottom" constant="20" id="P16-oh-FoO"/>
+                            <constraint firstItem="FOa-EE-Bj6" firstAttribute="top" secondItem="9RT-mf-ZqI" secondAttribute="bottom" constant="7" id="Sd7-64-IVT"/>
+                            <constraint firstItem="c6i-qf-0BG" firstAttribute="top" secondItem="vC4-nC-vOf" secondAttribute="bottom" constant="5" id="Wte-79-vcR"/>
+                            <constraint firstItem="DP0-JU-fjQ" firstAttribute="centerX" secondItem="c6i-qf-0BG" secondAttribute="centerX" id="XVW-Dd-s6d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ygq-ag-DaF" secondAttribute="trailing" id="Y15-B4-GAC"/>
                             <constraint firstItem="5vD-4f-Yum" firstAttribute="top" secondItem="BYQ-Ev-grZ" secondAttribute="bottom" constant="5" id="Z0H-dK-cEg"/>
                             <constraint firstItem="pCN-al-WId" firstAttribute="centerX" secondItem="Ygq-ag-DaF" secondAttribute="centerX" id="aBS-pl-FqU"/>
                             <constraint firstItem="FOa-EE-Bj6" firstAttribute="centerX" secondItem="CJs-0t-XfZ" secondAttribute="centerX" id="bVQ-fq-1hg"/>
                             <constraint firstItem="WFc-YM-vDp" firstAttribute="top" secondItem="BBb-bO-87f" secondAttribute="bottom" constant="37" id="bXI-c8-bjS"/>
+                            <constraint firstItem="19e-Vz-ozS" firstAttribute="centerY" secondItem="skK-JQ-ofk" secondAttribute="centerY" id="bZm-hd-lg1"/>
+                            <constraint firstItem="1qF-mt-tE2" firstAttribute="top" secondItem="vC4-nC-vOf" secondAttribute="bottom" constant="5" id="eIh-qu-QlF"/>
+                            <constraint firstItem="vC4-nC-vOf" firstAttribute="leading" secondItem="c6i-qf-0BG" secondAttribute="trailing" constant="-127" id="tvL-UU-ENZ"/>
+                            <constraint firstItem="vC4-nC-vOf" firstAttribute="top" secondItem="FOa-EE-Bj6" secondAttribute="bottom" constant="15" id="uqe-zw-Rwa"/>
+                            <constraint firstItem="19e-Vz-ozS" firstAttribute="centerX" secondItem="DFa-Jy-HHL" secondAttribute="centerX" id="wjk-CP-IXp"/>
+                            <constraint firstItem="1qF-mt-tE2" firstAttribute="leading" secondItem="vC4-nC-vOf" secondAttribute="trailing" constant="-121" id="y87-Nx-g6G"/>
+                            <constraint firstItem="vC4-nC-vOf" firstAttribute="centerX" secondItem="FOa-EE-Bj6" secondAttribute="centerX" id="z7c-T7-Qcr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About Us" id="oNz-8b-nkc"/>
